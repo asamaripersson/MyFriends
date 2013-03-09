@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C03C4FA16BBF49B00EDE3AC /* APFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C03C4F916BBF49B00EDE3AC /* APFriendListCell.m */; };
+		1C39A44916C82B1500A5FBB3 /* frame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C39A44816C82B1500A5FBB3 /* frame.jpg */; };
+		1C39A44C16C82EB100A5FBB3 /* aFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39A44B16C82EB100A5FBB3 /* aFrame.png */; };
+		1C39A44F16C831FE00A5FBB3 /* Me.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C39A44E16C831FE00A5FBB3 /* Me.m */; };
+		1C40DA0316BC0FB600AF42F5 /* APDetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C40DA0216BC0FB600AF42F5 /* APDetailInfoViewController.m */; };
+		1C40DA0716BC0FCD00AF42F5 /* APEditFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C40DA0616BC0FCD00AF42F5 /* APEditFriendViewController.m */; };
+		1C4B4418169074C8008D1823 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B4417169074C8008D1823 /* UIKit.framework */; };
+		1C4B441A169074C8008D1823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B4419169074C8008D1823 /* Foundation.framework */; };
+		1C4B441C169074C8008D1823 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B441B169074C8008D1823 /* CoreGraphics.framework */; };
+		1C4B4422169074C8008D1823 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C4B4420169074C8008D1823 /* InfoPlist.strings */; };
+		1C4B4424169074C8008D1823 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B4423169074C8008D1823 /* main.m */; };
+		1C4B4428169074C8008D1823 /* APAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B4427169074C8008D1823 /* APAppDelegate.m */; };
+		1C4B442A169074C8008D1823 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C4B4429169074C8008D1823 /* Default.png */; };
+		1C4B442C169074C8008D1823 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C4B442B169074C8008D1823 /* Default@2x.png */; };
+		1C4B442E169074C8008D1823 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C4B442D169074C8008D1823 /* Default-568h@2x.png */; };
+		1C4B4431169074C8008D1823 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4B442F169074C8008D1823 /* MainStoryboard.storyboard */; };
+		1C4B4434169074C8008D1823 /* APViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B4433169074C8008D1823 /* APViewController.m */; };
+		1C4B443C16907AEA008D1823 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B443A16907AEA008D1823 /* Model.xcdatamodeld */; };
+		1C4B444416908098008D1823 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B444316908098008D1823 /* CoreData.framework */; };
+		1C4B4447169080E7008D1823 /* APMyFriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B4446169080E7008D1823 /* APMyFriendsListViewController.m */; };
+		1C52F14516BD168F00A846DA /* APEditMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C52F14416BD168F00A846DA /* APEditMeViewController.m */; };
+		1C52F14B16BD17A300A846DA /* APMeStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C52F14A16BD17A300A846DA /* APMeStorage.m */; };
+		1C5AA60F16C7A356006A972E /* fille.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C5AA60E16C7A356006A972E /* fille.jpg */; };
+		1C5AA61A16C7B291006A972E /* APImageStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5AA61916C7B291006A972E /* APImageStorage.m */; };
+		1C84231E16C7E82A009CB823 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C84231D16C7E82A009CB823 /* Friend.m */; };
+		1CCF64E0169377E100E1F896 /* APFriendStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF64DF169377E100E1F896 /* APFriendStorage.m */; };
+		1CCF64E416937B0C00E1F896 /* APCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF64E316937B0C00E1F896 /* APCoreDataService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C03C4F816BBF49B00EDE3AC /* APFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APFriendListCell.h; sourceTree = "<group>"; };
+		1C03C4F916BBF49B00EDE3AC /* APFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APFriendListCell.m; sourceTree = "<group>"; };
+		1C39A44816C82B1500A5FBB3 /* frame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frame.jpg; sourceTree = "<group>"; };
+		1C39A44B16C82EB100A5FBB3 /* aFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aFrame.png; sourceTree = "<group>"; };
+		1C39A44D16C831FE00A5FBB3 /* Me.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Me.h; path = ../Me.h; sourceTree = "<group>"; };
+		1C39A44E16C831FE00A5FBB3 /* Me.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Me.m; path = ../Me.m; sourceTree = "<group>"; };
+		1C40DA0116BC0FB600AF42F5 /* APDetailInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDetailInfoViewController.h; sourceTree = "<group>"; };
+		1C40DA0216BC0FB600AF42F5 /* APDetailInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDetailInfoViewController.m; sourceTree = "<group>"; };
+		1C40DA0516BC0FCD00AF42F5 /* APEditFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEditFriendViewController.h; sourceTree = "<group>"; };
+		1C40DA0616BC0FCD00AF42F5 /* APEditFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEditFriendViewController.m; sourceTree = "<group>"; };
+		1C4B4413169074C8008D1823 /* MyFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C4B4417169074C8008D1823 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1C4B4419169074C8008D1823 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1C4B441B169074C8008D1823 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1C4B441F169074C8008D1823 /* MyFriends-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFriends-Info.plist"; sourceTree = "<group>"; };
+		1C4B4421169074C8008D1823 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C4B4423169074C8008D1823 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C4B4425169074C8008D1823 /* MyFriends-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFriends-Prefix.pch"; sourceTree = "<group>"; };
+		1C4B4426169074C8008D1823 /* APAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APAppDelegate.h; sourceTree = "<group>"; };
+		1C4B4427169074C8008D1823 /* APAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APAppDelegate.m; sourceTree = "<group>"; };
+		1C4B4429169074C8008D1823 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1C4B442B169074C8008D1823 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1C4B442D169074C8008D1823 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1C4B4430169074C8008D1823 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1C4B4432169074C8008D1823 /* APViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APViewController.h; sourceTree = "<group>"; };
+		1C4B4433169074C8008D1823 /* APViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
+		1C4B443B16907AEA008D1823 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1C4B444316908098008D1823 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1C4B4445169080E7008D1823 /* APMyFriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMyFriendsListViewController.h; sourceTree = "<group>"; };
+		1C4B4446169080E7008D1823 /* APMyFriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMyFriendsListViewController.m; sourceTree = "<group>"; };
+		1C52F14316BD168F00A846DA /* APEditMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APEditMeViewController.h; sourceTree = "<group>"; };
+		1C52F14416BD168F00A846DA /* APEditMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEditMeViewController.m; sourceTree = "<group>"; };
+		1C52F14916BD17A300A846DA /* APMeStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMeStorage.h; sourceTree = "<group>"; };
+		1C52F14A16BD17A300A846DA /* APMeStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMeStorage.m; sourceTree = "<group>"; };
+		1C5AA60E16C7A356006A972E /* fille.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fille.jpg; sourceTree = "<group>"; };
+		1C5AA61816C7B291006A972E /* APImageStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APImageStorage.h; sourceTree = "<group>"; };
+		1C5AA61916C7B291006A972E /* APImageStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APImageStorage.m; sourceTree = "<group>"; };
+		1C84231C16C7E82A009CB823 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = ../Friend.h; sourceTree = "<group>"; };
+		1C84231D16C7E82A009CB823 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = ../Friend.m; sourceTree = "<group>"; };
+		1CCF64DE169377E100E1F896 /* APFriendStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APFriendStorage.h; sourceTree = "<group>"; };
+		1CCF64DF169377E100E1F896 /* APFriendStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APFriendStorage.m; sourceTree = "<group>"; };
+		1CCF64E216937B0C00E1F896 /* APCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCoreDataService.h; sourceTree = "<group>"; };
+		1CCF64E316937B0C00E1F896 /* APCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCoreDataService.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C4B4410169074C8008D1823 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C4B444416908098008D1823 /* CoreData.framework in Frameworks */,
+				1C4B4418169074C8008D1823 /* UIKit.framework in Frameworks */,
+				1C4B441A169074C8008D1823 /* Foundation.framework in Frameworks */,
+				1C4B441C169074C8008D1823 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C03C4F616BBF47100EDE3AC /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C4B4432169074C8008D1823 /* APViewController.h */,
+				1C4B4433169074C8008D1823 /* APViewController.m */,
+				1C4B4445169080E7008D1823 /* APMyFriendsListViewController.h */,
+				1C4B4446169080E7008D1823 /* APMyFriendsListViewController.m */,
+				1C03C4F816BBF49B00EDE3AC /* APFriendListCell.h */,
+				1C03C4F916BBF49B00EDE3AC /* APFriendListCell.m */,
+				1C40DA0116BC0FB600AF42F5 /* APDetailInfoViewController.h */,
+				1C40DA0216BC0FB600AF42F5 /* APDetailInfoViewController.m */,
+				1C40DA0516BC0FCD00AF42F5 /* APEditFriendViewController.h */,
+				1C40DA0616BC0FCD00AF42F5 /* APEditFriendViewController.m */,
+				1C52F14316BD168F00A846DA /* APEditMeViewController.h */,
+				1C52F14416BD168F00A846DA /* APEditMeViewController.m */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		1C4B4408169074C8008D1823 = {
+			isa = PBXGroup;
+			children = (
+				1C4B441D169074C8008D1823 /* MyFriends */,
+				1C4B4416169074C8008D1823 /* Frameworks */,
+				1C4B4414169074C8008D1823 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C4B4414169074C8008D1823 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C4B4413169074C8008D1823 /* MyFriends.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C4B4416169074C8008D1823 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C4B444316908098008D1823 /* CoreData.framework */,
+				1C4B4417169074C8008D1823 /* UIKit.framework */,
+				1C4B4419169074C8008D1823 /* Foundation.framework */,
+				1C4B441B169074C8008D1823 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C4B441D169074C8008D1823 /* MyFriends */ = {
+			isa = PBXGroup;
+			children = (
+				1C4B4426169074C8008D1823 /* APAppDelegate.h */,
+				1C4B4427169074C8008D1823 /* APAppDelegate.m */,
+				1C4B442F169074C8008D1823 /* MainStoryboard.storyboard */,
+				1C4B441E169074C8008D1823 /* Supporting Files */,
+				1C52F14716BD177000A846DA /* Models */,
+				1C03C4F616BBF47100EDE3AC /* viewControllers */,
+			);
+			path = MyFriends;
+			sourceTree = "<group>";
+		};
+		1C4B441E169074C8008D1823 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C39A44B16C82EB100A5FBB3 /* aFrame.png */,
+				1C39A44816C82B1500A5FBB3 /* frame.jpg */,
+				1C4B441F169074C8008D1823 /* MyFriends-Info.plist */,
+				1C5AA60E16C7A356006A972E /* fille.jpg */,
+				1C4B4420169074C8008D1823 /* InfoPlist.strings */,
+				1C4B4423169074C8008D1823 /* main.m */,
+				1C4B4425169074C8008D1823 /* MyFriends-Prefix.pch */,
+				1C4B4429169074C8008D1823 /* Default.png */,
+				1C4B442B169074C8008D1823 /* Default@2x.png */,
+				1C4B442D169074C8008D1823 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C52F14716BD177000A846DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C4B443A16907AEA008D1823 /* Model.xcdatamodeld */,
+				1C84231C16C7E82A009CB823 /* Friend.h */,
+				1C84231D16C7E82A009CB823 /* Friend.m */,
+				1C39A44D16C831FE00A5FBB3 /* Me.h */,
+				1C39A44E16C831FE00A5FBB3 /* Me.m */,
+				1C52F14816BD178400A846DA /* Storages */,
+				1CCF64E216937B0C00E1F896 /* APCoreDataService.h */,
+				1CCF64E316937B0C00E1F896 /* APCoreDataService.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1C52F14816BD178400A846DA /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				1CCF64DE169377E100E1F896 /* APFriendStorage.h */,
+				1CCF64DF169377E100E1F896 /* APFriendStorage.m */,
+				1C52F14916BD17A300A846DA /* APMeStorage.h */,
+				1C52F14A16BD17A300A846DA /* APMeStorage.m */,
+				1C5AA61816C7B291006A972E /* APImageStorage.h */,
+				1C5AA61916C7B291006A972E /* APImageStorage.m */,
+			);
+			name = Storages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C4B4412169074C8008D1823 /* MyFriends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C4B4437169074C8008D1823 /* Build configuration list for PBXNativeTarget "MyFriends" */;
+			buildPhases = (
+				1C4B440F169074C8008D1823 /* Sources */,
+				1C4B4410169074C8008D1823 /* Frameworks */,
+				1C4B4411169074C8008D1823 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyFriends;
+			productName = MyFriends;
+			productReference = 1C4B4413169074C8008D1823 /* MyFriends.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C4B440A169074C8008D1823 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AP;
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 1C4B440D169074C8008D1823 /* Build configuration list for PBXProject "MyFriends" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C4B4408169074C8008D1823;
+			productRefGroup = 1C4B4414169074C8008D1823 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C4B4412169074C8008D1823 /* MyFriends */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C4B4411169074C8008D1823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C4B4422169074C8008D1823 /* InfoPlist.strings in Resources */,
+				1C4B442A169074C8008D1823 /* Default.png in Resources */,
+				1C4B442C169074C8008D1823 /* Default@2x.png in Resources */,
+				1C4B442E169074C8008D1823 /* Default-568h@2x.png in Resources */,
+				1C4B4431169074C8008D1823 /* MainStoryboard.storyboard in Resources */,
+				1C5AA60F16C7A356006A972E /* fille.jpg in Resources */,
+				1C39A44916C82B1500A5FBB3 /* frame.jpg in Resources */,
+				1C39A44C16C82EB100A5FBB3 /* aFrame.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C4B440F169074C8008D1823 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C4B4424169074C8008D1823 /* main.m in Sources */,
+				1C4B4428169074C8008D1823 /* APAppDelegate.m in Sources */,
+				1C4B4434169074C8008D1823 /* APViewController.m in Sources */,
+				1C4B443C16907AEA008D1823 /* Model.xcdatamodeld in Sources */,
+				1C4B4447169080E7008D1823 /* APMyFriendsListViewController.m in Sources */,
+				1CCF64E0169377E100E1F896 /* APFriendStorage.m in Sources */,
+				1CCF64E416937B0C00E1F896 /* APCoreDataService.m in Sources */,
+				1C03C4FA16BBF49B00EDE3AC /* APFriendListCell.m in Sources */,
+				1C40DA0316BC0FB600AF42F5 /* APDetailInfoViewController.m in Sources */,
+				1C40DA0716BC0FCD00AF42F5 /* APEditFriendViewController.m in Sources */,
+				1C52F14516BD168F00A846DA /* APEditMeViewController.m in Sources */,
+				1C52F14B16BD17A300A846DA /* APMeStorage.m in Sources */,
+				1C5AA61A16C7B291006A972E /* APImageStorage.m in Sources */,
+				1C84231E16C7E82A009CB823 /* Friend.m in Sources */,
+				1C39A44F16C831FE00A5FBB3 /* Me.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1C4B4420169074C8008D1823 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C4B4421169074C8008D1823 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1C4B442F169074C8008D1823 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C4B4430169074C8008D1823 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C4B4435169074C8008D1823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1C4B4436169074C8008D1823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C4B4438169074C8008D1823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyFriends/MyFriends-Prefix.pch";
+				INFOPLIST_FILE = "MyFriends/MyFriends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1C4B4439169074C8008D1823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyFriends/MyFriends-Prefix.pch";
+				INFOPLIST_FILE = "MyFriends/MyFriends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C4B440D169074C8008D1823 /* Build configuration list for PBXProject "MyFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C4B4435169074C8008D1823 /* Debug */,
+				1C4B4436169074C8008D1823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C4B4437169074C8008D1823 /* Build configuration list for PBXNativeTarget "MyFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C4B4438169074C8008D1823 /* Debug */,
+				1C4B4439169074C8008D1823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1C4B443A16907AEA008D1823 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1C4B443B16907AEA008D1823 /* Model.xcdatamodel */,
+			);
+			currentVersion = 1C4B443B16907AEA008D1823 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1C4B440A169074C8008D1823 /* Project object */;
+}

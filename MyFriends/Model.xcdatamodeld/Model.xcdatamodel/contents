@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1810" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Friend" representedClassName="Friend" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bestMemory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteMovie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteMusic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteTVShow" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteWebsite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hobby" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ifIgotOneWish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" transient="YES" syncable="YES"/>
+        <attribute name="imageKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="whenIgrowUp" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Me" representedClassName="Me" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bestMemory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteMovie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteMusic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteTVShow" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoriteWebsite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hobby" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ifIgotOneWish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="whenIgrowUp" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Friend" positionX="160" positionY="192" width="128" height="315"/>
+        <element name="Me" positionX="160" positionY="192" width="128" height="300"/>
+    </elements>
+</model>
