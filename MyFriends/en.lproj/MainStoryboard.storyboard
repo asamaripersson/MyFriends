@@ -323,7 +323,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="lE0-RY-PNb">
-                                        <rect key="frame" x="0.0" y="363" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="363" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -387,11 +387,11 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHM-zM-BFG">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="39" id="HiA-77-tXc"/>
-                                                        <constraint firstAttribute="width" constant="60" id="xyG-Gy-V9j"/>
+                                                        <constraint firstAttribute="width" constant="50" id="bDb-gy-4Pt"/>
+                                                        <constraint firstAttribute="height" constant="40" id="djx-Wa-Fjy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="ta bild">
+                                                    <state key="normal" backgroundImage="camera.png">
                                                         <color key="titleColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -407,12 +407,12 @@
                                         </view>
                                         <color key="backgroundColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="bqf-76-eiU" firstAttribute="leading" secondItem="jeV-iL-fcR" secondAttribute="leading" constant="47" id="3a3-VM-tPl"/>
-                                            <constraint firstItem="jHM-zM-BFG" firstAttribute="leading" secondItem="bqf-76-eiU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4mZ-Nb-HVq"/>
+                                            <constraint firstItem="jHM-zM-BFG" firstAttribute="top" secondItem="jeV-iL-fcR" secondAttribute="top" constant="98" id="1aM-fh-oB2"/>
+                                            <constraint firstItem="CBo-hu-uL0" firstAttribute="leading" secondItem="jeV-iL-fcR" secondAttribute="leading" constant="36" id="2GJ-VX-6pG"/>
                                             <constraint firstItem="bqf-76-eiU" firstAttribute="centerX" secondItem="CBo-hu-uL0" secondAttribute="centerX" type="default" id="Aom-T8-njv"/>
+                                            <constraint firstItem="jHM-zM-BFG" firstAttribute="leading" secondItem="jeV-iL-fcR" secondAttribute="leading" constant="246" id="FEs-oS-UJX"/>
                                             <constraint firstItem="CBo-hu-uL0" firstAttribute="top" secondItem="jeV-iL-fcR" secondAttribute="top" constant="6" id="Ohu-dG-AGP"/>
                                             <constraint firstItem="bqf-76-eiU" firstAttribute="top" secondItem="jeV-iL-fcR" secondAttribute="top" constant="21" id="iaY-Mc-AXs"/>
-                                            <constraint firstItem="jHM-zM-BFG" firstAttribute="bottom" secondItem="bqf-76-eiU" secondAttribute="bottom" type="default" id="saH-L6-In9"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wbd-EZ-CnJ">
@@ -931,6 +931,7 @@
     </scenes>
     <resources>
         <image name="aFrame.png" width="160" height="100"/>
+        <image name="camera.png" width="200" height="200"/>
     </resources>
     <classes>
         <class className="APDetailInfoViewController" superclassName="UITableViewController">
