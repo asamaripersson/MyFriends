@@ -91,6 +91,10 @@
                                                       forKey:aNewImageKey];
         }
     } else {
+        if (_firstName.text.length < 1) {
+            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"inget namn" message:@"Du måste ange din väns förnamn för att lägga till den som vän." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        } else {
         
    _currentFriend = [[APFriendStorage sharedStorage] createFriendWithName:_firstName.text
                                                                      lastname:_lastName.text
@@ -104,17 +108,22 @@
                                                                 favoriteMusic:@""
                                                                favoriteTvShow:@""
                                                                         image:nil
-                                                                     imageKey:aNewImageKey
+                                                                     imageKey:nil
                                                               favoriteWebsite:@""
                                                                    bestMemory:@""
                                                                   whenIgrowUp:@""
                                                                 ifIgotOneWish:@""
                                                                   phonenumber:nil];
-        [[APImageStorage defaultImageStore] setImage:aNewImage
-                                              forKey:aNewImageKey];
+        
+        if (thereIsANewImage) {
+            [_currentFriend setImageKey:aNewImageKey];
+            
+            [[APImageStorage defaultImageStore] setImage:aNewImage
+                                                  forKey:aNewImageKey];
+        }
+             [[self navigationController]popViewControllerAnimated:YES];
+        }
     }
-
-    [[self navigationController]popViewControllerAnimated:YES];
     
 }
 

@@ -160,10 +160,8 @@
 		1C4B441E169074C8008D1823 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1C39A44B16C82EB100A5FBB3 /* aFrame.png */,
-				1C39A44816C82B1500A5FBB3 /* frame.jpg */,
+				1C82374216EBDC89000459EB /* images */,
 				1C4B441F169074C8008D1823 /* MyFriends-Info.plist */,
-				1C5AA60E16C7A356006A972E /* fille.jpg */,
 				1C4B4420169074C8008D1823 /* InfoPlist.strings */,
 				1C4B4423169074C8008D1823 /* main.m */,
 				1C4B4425169074C8008D1823 /* MyFriends-Prefix.pch */,
@@ -200,6 +198,16 @@
 				1C5AA61916C7B291006A972E /* APImageStorage.m */,
 			);
 			name = Storages;
+			sourceTree = "<group>";
+		};
+		1C82374216EBDC89000459EB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1C39A44B16C82EB100A5FBB3 /* aFrame.png */,
+				1C39A44816C82B1500A5FBB3 /* frame.jpg */,
+				1C5AA60E16C7A356006A972E /* fille.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
