@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Friend;
-@interface APDetailStepTwoViewController : UIViewController
+@interface APDetailStepTwoViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
 @property (weak, nonatomic) Friend *currentFriend;
 @end

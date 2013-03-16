@@ -15,6 +15,8 @@
 #import "APImageStorage.h"
 #import "APDetailStepTwoViewController.h"
 #import "APDetailStepThreeViewController.h"
+#import "APEditStepTwoViewController.h"
+#import "APEditStepThreeViewController.h"
 
 @interface APMyFriendsListViewController ()
 
@@ -49,6 +51,25 @@
         [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
     }
 
+    if ([segue.identifier isEqualToString:@"addFriendSegue"]) {
+        UITabBarController *tbc = [segue destinationViewController];
+        
+        APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
+        APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
+        APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        currentFriend = [[[APFriendStorage sharedStorage]allFriends] objectAtIndex:path.row];
+        [efVc setCurrentFriend:currentFriend];
+        [efTwovc setCurrentFriend:currentFriend];
+        [efThreevc setCurrentFriend:currentFriend];
+        
+        UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
+                                        initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                        target:[[tbc viewControllers]objectAtIndex:0]
+                                        action:@selector(editFriend)];
+        
+        [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
+    }
 }
 
 

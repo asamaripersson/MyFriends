@@ -1,5 +1,5 @@
 //
-//  APDetailStepThreeViewController.h
+//  APEditStepTwoViewController.h
 //  MyFriends
 //
 //  Created by Åsa Persson on 2013-03-16.
@@ -8,12 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Friend;
-
-@interface APDetailStepThreeViewController : UITableViewController
+@interface APEditStepTwoViewController : UITableViewController
 @property (weak, nonatomic) Friend *currentFriend;
-
-@property (weak, nonatomic) IBOutlet UILabel *test;
-
-
 
 @end
