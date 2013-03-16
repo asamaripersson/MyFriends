@@ -29,6 +29,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s base info",_currentFriend.firstName]];
     _firstName.text = _currentFriend.firstName;
     _lastName.text = _currentFriend.lastName;
     _birthday.text = _currentFriend.birthDay;
@@ -39,8 +40,7 @@
         
     NSString *imageKey = [_currentFriend imageKey];
     if (imageKey) {
-        UIImage *imageToDisplay =
-        [[APImageStorage defaultImageStore] imageForKey:imageKey];
+        UIImage *imageToDisplay = [[APImageStorage defaultImageStore] imageForKey:imageKey];
         NSLog(@"there is an imagekey"); 
         [_image setImage:imageToDisplay];
     } else {

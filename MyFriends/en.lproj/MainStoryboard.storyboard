@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1248" y="-824"/>
+            <point key="canvasLocation" x="1464" y="-408"/>
         </scene>
         <!--My Friends List View Controller-->
         <scene sceneID="ulA-cV-fxo">
@@ -122,7 +122,7 @@
                                     <outlet property="firstNameLabel" destination="jHv-go-nBj" id="ow2-Hy-F0B"/>
                                     <outlet property="image" destination="6g3-hC-OeJ" id="EnT-ec-lYa"/>
                                     <outlet property="lastNameLabel" destination="Bg6-Sw-O72" id="oCr-W7-JZE"/>
-                                    <segue destination="LuR-bT-E9K" kind="push" identifier="detailInfoSegue" id="GBW-PM-lSO"/>
+                                    <segue destination="7SZ-6I-h5d" kind="push" identifier="detailInfoSegue" id="cKr-zV-Zhm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -141,7 +141,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0d8-Yn-hNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="-2"/>
+            <point key="canvasLocation" x="1979" y="220"/>
         </scene>
         <!--Edit Me View Controller - JAG-->
         <scene sceneID="DdT-d7-Tv5">
@@ -323,7 +323,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="lE0-RY-PNb">
-                                        <rect key="frame" x="0.0" y="363" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="363" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -352,7 +352,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydX-h4-E4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="-1103"/>
+            <point key="canvasLocation" x="2065" y="-875"/>
         </scene>
         <!--Edit Friend View Controller - Item-->
         <scene sceneID="RXU-Q0-6uk">
@@ -595,15 +595,18 @@
             </objects>
             <point key="canvasLocation" x="3466" y="-30"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Step Two View Controller-->
         <scene sceneID="L11-kL-w3x">
             <objects>
-                <viewController id="zor-YT-zhv" sceneMemberID="viewController">
+                <viewController id="zor-YT-zhv" customClass="APDetailStepTwoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J8A-QV-Xpj">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZW-Ki-BEI">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="HEj" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZW-Ki-BEI">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="ozb-rK-IZf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -611,15 +614,47 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="4ZW-Ki-BEI" secondAttribute="trailing" constant="52" id="Dqc-X3-5gV"/>
+                            <constraint firstItem="4ZW-Ki-BEI" firstAttribute="leading" secondItem="J8A-QV-Xpj" secondAttribute="leading" constant="130" id="K5b-gd-Vn9"/>
                             <constraint firstItem="4ZW-Ki-BEI" firstAttribute="top" secondItem="J8A-QV-Xpj" secondAttribute="top" constant="183" id="UHu-k0-b8x"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="1l7-1v-lRd"/>
+                    <connections>
+                        <outlet property="testLabel" destination="4ZW-Ki-BEI" id="BAL-t4-bPr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJd-Lh-plp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2995" y="648"/>
+        </scene>
+        <!--Detail Step Three View Controller - Item-->
+        <scene sceneID="6y3-CP-pGt">
+            <objects>
+                <viewController id="jg8-pQ-Krg" customClass="APDetailStepThreeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NXr-q3-m5I">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1p2-d5-S8f">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1p2-d5-S8f" firstAttribute="top" secondItem="NXr-q3-m5I" secondAttribute="top" constant="185" id="HNV-ie-6Ew"/>
+                            <constraint firstItem="1p2-d5-S8f" firstAttribute="leading" secondItem="NXr-q3-m5I" secondAttribute="leading" constant="131" id="zDG-sc-tYe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="RaL-eM-4d3"/>
+                    <connections>
+                        <outlet property="test" destination="1p2-d5-S8f" id="GxQ-fO-PMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdp-GW-a9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="955"/>
         </scene>
         <!--Detail Info View Controller-->
         <scene sceneID="axi-hm-aA5">
@@ -952,14 +987,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmR-8C-YXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="-824"/>
+            <point key="canvasLocation" x="1070" y="-408"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cVn-Yf-Z22">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oNb-8d-PKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="7SZ-6I-h5d" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ECm-xS-D6x"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="AU1-QO-OlP">
                         <autoresizingMask key="autoresizingMask"/>
@@ -968,74 +1003,18 @@
                     <connections>
                         <segue destination="LuR-bT-E9K" kind="relationship" relationship="viewControllers" id="2ZA-hd-PKr"/>
                         <segue destination="zor-YT-zhv" kind="relationship" relationship="viewControllers" id="qyO-qI-nRX"/>
+                        <segue destination="jg8-pQ-Krg" kind="relationship" relationship="viewControllers" id="gv0-eI-xCA"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNb-8d-PKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2469" y="312"/>
+            <point key="canvasLocation" x="2461" y="714"/>
         </scene>
     </scenes>
     <resources>
         <image name="aFrame.png" width="160" height="100"/>
         <image name="camera.png" width="200" height="200"/>
     </resources>
-    <classes>
-        <class className="APDetailInfoViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APDetailInfoViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="address" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="birthday" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="email" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="firstName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lastName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="phoneNumber" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="school" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="APEditFriendViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditFriendViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="saveFriend:"/>
-                <relationship kind="action" name="takePic:"/>
-                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="birtday" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lastName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="school" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="APEditMeViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditMeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="saveMe:"/>
-                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="birthday" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="firstName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lastName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="school" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="APFriendListCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APFriendListCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="firstNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lastNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="APMyFriendsListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APMyFriendsListViewController.h"/>
-        </class>
-        <class className="APViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -1043,6 +1022,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="X83-z0-uff"/>
-        <segue reference="GBW-PM-lSO"/>
     </inferredMetricsTieBreakers>
 </document>

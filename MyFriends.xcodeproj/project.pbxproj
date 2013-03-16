@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C01FD4716F4A05B003720A7 /* APDetailStepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C01FD4616F4A05B003720A7 /* APDetailStepTwoViewController.m */; };
+		1C01FD4B16F4A331003720A7 /* APDetailStepThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C01FD4A16F4A331003720A7 /* APDetailStepThreeViewController.m */; };
 		1C03C4FA16BBF49B00EDE3AC /* APFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C03C4F916BBF49B00EDE3AC /* APFriendListCell.m */; };
 		1C39A44916C82B1500A5FBB3 /* frame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C39A44816C82B1500A5FBB3 /* frame.jpg */; };
 		1C39A44C16C82EB100A5FBB3 /* aFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39A44B16C82EB100A5FBB3 /* aFrame.png */; };
@@ -38,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C01FD4516F4A05B003720A7 /* APDetailStepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDetailStepTwoViewController.h; sourceTree = "<group>"; };
+		1C01FD4616F4A05B003720A7 /* APDetailStepTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDetailStepTwoViewController.m; sourceTree = "<group>"; };
+		1C01FD4916F4A331003720A7 /* APDetailStepThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDetailStepThreeViewController.h; sourceTree = "<group>"; };
+		1C01FD4A16F4A331003720A7 /* APDetailStepThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDetailStepThreeViewController.m; sourceTree = "<group>"; };
 		1C03C4F816BBF49B00EDE3AC /* APFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APFriendListCell.h; sourceTree = "<group>"; };
 		1C03C4F916BBF49B00EDE3AC /* APFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APFriendListCell.m; sourceTree = "<group>"; };
 		1C39A44816C82B1500A5FBB3 /* frame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frame.jpg; sourceTree = "<group>"; };
@@ -99,6 +105,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C01FD4816F4A207003720A7 /* Details for Friens VC */ = {
+			isa = PBXGroup;
+			children = (
+				1C40DA0116BC0FB600AF42F5 /* APDetailInfoViewController.h */,
+				1C40DA0216BC0FB600AF42F5 /* APDetailInfoViewController.m */,
+				1C01FD4516F4A05B003720A7 /* APDetailStepTwoViewController.h */,
+				1C01FD4616F4A05B003720A7 /* APDetailStepTwoViewController.m */,
+				1C40DA0516BC0FCD00AF42F5 /* APEditFriendViewController.h */,
+				1C40DA0616BC0FCD00AF42F5 /* APEditFriendViewController.m */,
+				1C01FD4916F4A331003720A7 /* APDetailStepThreeViewController.h */,
+				1C01FD4A16F4A331003720A7 /* APDetailStepThreeViewController.m */,
+			);
+			name = "Details for Friens VC";
+			sourceTree = "<group>";
+		};
 		1C03C4F616BBF47100EDE3AC /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,10 +129,7 @@
 				1C4B4446169080E7008D1823 /* APMyFriendsListViewController.m */,
 				1C03C4F816BBF49B00EDE3AC /* APFriendListCell.h */,
 				1C03C4F916BBF49B00EDE3AC /* APFriendListCell.m */,
-				1C40DA0116BC0FB600AF42F5 /* APDetailInfoViewController.h */,
-				1C40DA0216BC0FB600AF42F5 /* APDetailInfoViewController.m */,
-				1C40DA0516BC0FCD00AF42F5 /* APEditFriendViewController.h */,
-				1C40DA0616BC0FCD00AF42F5 /* APEditFriendViewController.m */,
+				1C01FD4816F4A207003720A7 /* Details for Friens VC */,
 				1C52F14316BD168F00A846DA /* APEditMeViewController.h */,
 				1C52F14416BD168F00A846DA /* APEditMeViewController.m */,
 			);
@@ -298,6 +316,8 @@
 				1C5AA61A16C7B291006A972E /* APImageStorage.m in Sources */,
 				1C84231E16C7E82A009CB823 /* Friend.m in Sources */,
 				1C39A44F16C831FE00A5FBB3 /* Me.m in Sources */,
+				1C01FD4716F4A05B003720A7 /* APDetailStepTwoViewController.m in Sources */,
+				1C01FD4B16F4A331003720A7 /* APDetailStepThreeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

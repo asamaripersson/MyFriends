@@ -13,6 +13,8 @@
 #import "APDetailInfoViewController.h"
 #import "APEditFriendViewController.h"
 #import "APImageStorage.h"
+#import "APDetailStepTwoViewController.h"
+#import "APDetailStepThreeViewController.h"
 
 @interface APMyFriendsListViewController ()
 
@@ -25,11 +27,21 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
+
     if ([segue.identifier isEqualToString:@"detailInfoSegue"]) {
+         UITabBarController *tbc = [segue destinationViewController];
+        
+        APDetailInfoViewController *divc = [[tbc viewControllers] objectAtIndex:0];
+        APDetailStepTwoViewController *dsTwovc = [[tbc viewControllers] objectAtIndex:1];
+        APDetailStepThreeViewController *dsThreevc = [[tbc viewControllers] objectAtIndex:2];
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
         currentFriend = [[[APFriendStorage sharedStorage]allFriends] objectAtIndex:path.row];
-        [[segue destinationViewController] setTitle:currentFriend.firstName];
-        [[segue destinationViewController] setCurrentFriend:currentFriend];
+        [divc setCurrentFriend:currentFriend];
+        [dsTwovc setCurrentFriend:currentFriend];
+        [dsThreevc setCurrentFriend:currentFriend];
+        
+        //TODO: set right barbbutton on tabbar nav! to edit friends!!!
     }
 
 }
@@ -76,6 +88,18 @@
     Friend *f = [[[APFriendStorage sharedStorage]allFriends]objectAtIndex:indexPath.row];
     cell.firstNameLabel.text = f.firstName;
     cell.lastNameLabel.text = f.lastName;
+    
+    
+    NSString *imageKey = [f imageKey];
+    if (imageKey) {
+        UIImage *imageToDisplay = [[APImageStorage defaultImageStore] imageForKey:imageKey];
+        NSLog(@"there is an imagekey");
+        [cell.image setImage:imageToDisplay];
+    } else {
+        [cell.image setImage:nil]; NSLog(@"there NO an imagekey");
+    }
+    
+    
     return cell;
 
 }
