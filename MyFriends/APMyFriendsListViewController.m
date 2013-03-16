@@ -41,11 +41,15 @@
         [dsTwovc setCurrentFriend:currentFriend];
         [dsThreevc setCurrentFriend:currentFriend];
         
-        //TODO: set right barbbutton on tabbar nav! to edit friends!!!
+        UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
+                                        initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                        target:[[tbc viewControllers]objectAtIndex:0]
+                                        action:@selector(editFriend)];
+        
+        [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
     }
 
 }
-
 
 
 -(void)viewWillAppear:(BOOL)animated

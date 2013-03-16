@@ -48,6 +48,12 @@
     }
     
 }
+- (void)editFriend
+{
+    NSLog(@"preform segue edit friend??");
+    [self performSegueWithIdentifier: @"EditFriendSeg" sender: self];
+    
+}
 
 - (void)viewDidLoad
 {
