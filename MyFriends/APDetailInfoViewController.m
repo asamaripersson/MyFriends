@@ -11,6 +11,10 @@
 #import "APFriendStorage.h"
 #import "APEditFriendViewController.h"
 #import "APImageStorage.h"
+#import "APDetailStepThreeViewController.h"
+#import "APEditStepTwoViewController.h"
+#import "APEditStepThreeViewController.h"
+
 @interface APDetailInfoViewController ()
 
 @end
@@ -19,10 +23,31 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+//    if ([segue.identifier isEqualToString:@"EditFriendSeg"]) {
+//        [[segue destinationViewController] setTitle:_currentFriend.firstName];
+//        [[segue destinationViewController] setCurrentFriend:_currentFriend];
+//       [[segue destinationViewController]setEditMode:YES];
+//    }
     if ([segue.identifier isEqualToString:@"EditFriendSeg"]) {
-        [[segue destinationViewController] setTitle:_currentFriend.firstName];
-        [[segue destinationViewController] setCurrentFriend:_currentFriend];
-       [[segue destinationViewController]setEditMode:YES];
+        UITabBarController *tbc = [segue destinationViewController];
+        
+        APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
+        APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
+        APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
+       
+        [efVc setCurrentFriend:_currentFriend];
+        [efTwovc setCurrentFriend:_currentFriend];
+        [efThreevc setCurrentFriend:_currentFriend];
+        [efVc setEditMode:YES];
+        [efTwovc setEditMode:YES];
+        [efThreevc setEditMode:YES];
+        
+        UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
+                                        initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                        target:[[tbc viewControllers]objectAtIndex:0]
+                                        action:@selector(removeFriend)];
+        
+        [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
     }
 }
 

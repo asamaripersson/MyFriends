@@ -130,8 +130,9 @@
     
 }
 
-- (IBAction)removeFriend:(id)sender
+- (void)removeFriend
 {
+    NSLog(@"REMOVES FIREND");
 [[APFriendStorage sharedStorage] removeFriend:_currentFriend];
 [self.navigationController popToViewController:
  [self.navigationController.viewControllers objectAtIndex:1]

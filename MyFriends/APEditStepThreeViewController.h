@@ -10,6 +10,6 @@
 @class Friend;
 @interface APEditStepThreeViewController : UITableViewController
 @property (weak, nonatomic) Friend *currentFriend;
-
+@property BOOL editMode;
 
 @end

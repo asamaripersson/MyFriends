@@ -10,5 +10,5 @@
 @class Friend;
 @interface APEditStepTwoViewController : UITableViewController
 @property (weak, nonatomic) Friend *currentFriend;
-
+@property BOOL editMode;
 @end

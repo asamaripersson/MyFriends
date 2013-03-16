@@ -54,21 +54,12 @@
     if ([segue.identifier isEqualToString:@"addFriendSegue"]) {
         UITabBarController *tbc = [segue destinationViewController];
         
-        APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
-        APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
-        APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
-        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        currentFriend = [[[APFriendStorage sharedStorage]allFriends] objectAtIndex:path.row];
-        [efVc setCurrentFriend:currentFriend];
-        [efTwovc setCurrentFriend:currentFriend];
-        [efThreevc setCurrentFriend:currentFriend];
         
-        UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
-                                        initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                        target:[[tbc viewControllers]objectAtIndex:0]
-                                        action:@selector(editFriend)];
+        //TODO: set tabbar vc different to avoid warnings (or __unused??)
+       __unused APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
+       __unused APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
+        __unused APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
         
-        [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
     }
 }
 

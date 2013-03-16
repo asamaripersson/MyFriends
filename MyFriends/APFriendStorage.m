@@ -36,7 +36,6 @@
         model = [[APCoreDataService  sharedService] getModel];
         context = [[APCoreDataService sharedService] getContext];
         
-//        [self loadAllFriends];
     }
     return self;
 }
@@ -65,7 +64,7 @@
     f.image = nil;
     f.imageKey = imageKey;
     f.phoneNumber = number;
-    NSLog(@"nuckeln %@",imageKey);
+    NSLog(@"key %@",imageKey);
     return f;
 }
 
@@ -77,24 +76,19 @@
 
 -(NSArray *)allFriends
 {
-    return [[APCoreDataService sharedService] fetchDataWithEntity:@"Friend"];
+    //TO DO: sort!!!
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES selector:@selector(localizedStandardCompare:)];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+
+    return [[APCoreDataService sharedService] fetchDataWithEntity:@"Friend"
+                                                     andPredicate:nil
+                                               andSortDescriptors:sortDescriptors];
+    
+//    return [[APCoreDataService sharedService] fetchDataWithEntity:@"Friend"];
 }
 
 
-//- (void)loadAllFriends
-//{
-//    if (!friendDictionary)
-//    {
-//        friendDictionary = [NSMutableDictionary dictionary];
-//        
-//        NSArray *result = [[APCoreDataService sharedService] fetchDataWithEntity:@"Friend"];
-//        
-//        for (Friend *friend in result)
-//        {
-//            [friendDictionary setObject:friend forKey:friend.firstName];
-//        }
-//    }
-//}
+
 
 @end
 

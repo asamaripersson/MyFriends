@@ -20,4 +20,7 @@
 -(NSManagedObjectModel*)getModel;
 
 -(NSArray*)fetchDataWithEntity:(NSString*)entity;
+
+-(NSArray *)fetchDataWithEntity:(NSString *)entity andPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors;
+
 @end
