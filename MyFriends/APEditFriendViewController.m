@@ -25,6 +25,9 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    {
+        //        [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s thoghts",_currentFriend.firstName]];
+        [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP ONEEE"];
     _firstName.delegate = self;
     _lastName.delegate = self;
     _birtday.delegate = self;
@@ -51,7 +54,7 @@
         [[self navigationItem] setRightBarButtonItem:removeItem];
     }
 }
-
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -127,8 +130,9 @@
     
 }
 
-- (IBAction)removeFriend:(id)sender
+- (void)removeFriend
 {
+    NSLog(@"REMOVES FIREND");
 [[APFriendStorage sharedStorage] removeFriend:_currentFriend];
 [self.navigationController popToViewController:
  [self.navigationController.viewControllers objectAtIndex:1]

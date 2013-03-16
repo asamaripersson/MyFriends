@@ -111,6 +111,30 @@
     return result;
 }
 
+-(NSArray *)fetchDataWithEntity:(NSString *)entity andPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *e = [[[self getModel] entitiesByName] objectForKey:entity];
+    [request setEntity:e];
+    
+    if(predicate != nil) {
+        [request setPredicate:predicate];
+    }
+    if (sortDescriptors != nil) {
+        [request setSortDescriptors:sortDescriptors];
+    }
+    
+    NSError *error;
+    NSArray *result = [[self getContext] executeFetchRequest:request error:&error];
+    if (!result)
+    {
+        [NSException raise:@"Fetch failed"
+                    format:@"Reason: %@", [error localizedDescription]];
+    }
+    return result;
+}
+
 - (NSString *)path
 {
     NSArray *documentDirectories =

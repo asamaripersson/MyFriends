@@ -13,6 +13,10 @@
 #import "APDetailInfoViewController.h"
 #import "APEditFriendViewController.h"
 #import "APImageStorage.h"
+#import "APDetailStepTwoViewController.h"
+#import "APDetailStepThreeViewController.h"
+#import "APEditStepTwoViewController.h"
+#import "APEditStepThreeViewController.h"
 
 @interface APMyFriendsListViewController ()
 
@@ -25,15 +29,39 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
+
     if ([segue.identifier isEqualToString:@"detailInfoSegue"]) {
+         UITabBarController *tbc = [segue destinationViewController];
+        
+        APDetailInfoViewController *divc = [[tbc viewControllers] objectAtIndex:0];
+        APDetailStepTwoViewController *dsTwovc = [[tbc viewControllers] objectAtIndex:1];
+        APDetailStepThreeViewController *dsThreevc = [[tbc viewControllers] objectAtIndex:2];
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
         currentFriend = [[[APFriendStorage sharedStorage]allFriends] objectAtIndex:path.row];
-        [[segue destinationViewController] setTitle:currentFriend.firstName];
-        [[segue destinationViewController] setCurrentFriend:currentFriend];
+        [divc setCurrentFriend:currentFriend];
+        [dsTwovc setCurrentFriend:currentFriend];
+        [dsThreevc setCurrentFriend:currentFriend];
+        
+        UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
+                                        initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                        target:[[tbc viewControllers]objectAtIndex:0]
+                                        action:@selector(editFriend)];
+        
+        [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
     }
 
+    if ([segue.identifier isEqualToString:@"addFriendSegue"]) {
+        UITabBarController *tbc = [segue destinationViewController];
+        
+        
+        //TODO: set tabbar vc different to avoid warnings (or __unused??)
+       __unused APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
+       __unused APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
+        __unused APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
+        
+    }
 }
-
 
 
 -(void)viewWillAppear:(BOOL)animated
@@ -76,6 +104,18 @@
     Friend *f = [[[APFriendStorage sharedStorage]allFriends]objectAtIndex:indexPath.row];
     cell.firstNameLabel.text = f.firstName;
     cell.lastNameLabel.text = f.lastName;
+    
+    
+    NSString *imageKey = [f imageKey];
+    if (imageKey) {
+        UIImage *imageToDisplay = [[APImageStorage defaultImageStore] imageForKey:imageKey];
+        NSLog(@"there is an imagekey");
+        [cell.image setImage:imageToDisplay];
+    } else {
+        [cell.image setImage:nil]; NSLog(@"there NO an imagekey");
+    }
+    
+    
     return cell;
 
 }
