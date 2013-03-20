@@ -542,7 +542,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="hXu-PU-WP6">
-                                        <rect key="frame" x="0.0" y="408" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="408" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -778,7 +778,7 @@
                         <outlet property="favMusicLabel" destination="45i-JB-lVA" id="jjZ-C2-E8a"/>
                         <outlet property="favTvLabel" destination="xEa-WY-YAE" id="RKo-u4-km4"/>
                         <outlet property="favWebLabel" destination="HsH-vg-4BA" id="83v-PV-1vS"/>
-                        <outlet property="hobbuLabel" destination="J1x-jR-c4Z" id="B3t-ct-lVl"/>
+                        <outlet property="hobbyLabel" destination="J1x-jR-c4Z" id="pj6-ch-AG5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIO-ZO-zPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -805,6 +805,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bO3-Tk-EGR">
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="dsW-mb-nIq"/>
                                                         <constraint firstAttribute="height" constant="96" id="tQ2-ee-A5T"/>
@@ -836,6 +837,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9p-0s-crC">
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="LLa-pN-zFI"/>
                                                         <constraint firstAttribute="width" constant="300" id="dso-YD-yYQ"/>
@@ -870,6 +872,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atF-0w-afK">
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="GGM-xb-PBi"/>
                                                         <constraint firstAttribute="width" constant="300" id="rgy-cf-nt6"/>
@@ -1193,7 +1196,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bfZ-Y2-SSy">
-                                        <rect key="frame" x="0.0" y="411" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="411" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -1317,7 +1320,7 @@
                                             <rect key="frame" x="10" y="1" width="300" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hobby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faW-Fm-IWt">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hobby:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faW-Fm-IWt">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="63" id="5Lt-Gh-ldd"/>
                                                         <constraint firstAttribute="height" constant="21" id="QCU-BJ-Fak"/>
@@ -1331,7 +1334,7 @@
                                                         <constraint firstAttribute="width" constant="180" id="oBn-aH-Hae"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
@@ -1592,6 +1595,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CN4-wd-Res">
+                                                    <color key="backgroundColor" red="0.95669162269999997" green="0.45672553780000003" blue="0.4583898783" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="Nvz-cn-aGe"/>
                                                         <constraint firstAttribute="width" constant="300" id="RxA-UO-tuG"/>
@@ -1623,6 +1627,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAv-5T-JcJ">
+                                                    <color key="backgroundColor" red="0.95669162269999997" green="0.45672553780000003" blue="0.4583898783" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="CKr-Ak-giz"/>
                                                         <constraint firstAttribute="width" constant="300" id="mIs-zF-Qem"/>
@@ -1657,6 +1662,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sax-uh-GfS">
+                                                    <color key="backgroundColor" red="0.95669162269999997" green="0.45672553780000003" blue="0.4583898783" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="fUy-EH-0kU"/>
                                                         <constraint firstAttribute="width" constant="300" id="yfW-r1-kmQ"/>
@@ -1677,8 +1683,8 @@
                                         </view>
                                         <color key="backgroundColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="sax-uh-GfS" firstAttribute="top" secondItem="8FM-V2-BR5" secondAttribute="top" constant="28" id="As3-Kf-7nw"/>
                                             <constraint firstItem="VbH-d9-HXm" firstAttribute="leading" secondItem="8FM-V2-BR5" secondAttribute="leading" constant="20" type="default" id="F4c-Ht-Rcb"/>
-                                            <constraint firstItem="sax-uh-GfS" firstAttribute="top" secondItem="8FM-V2-BR5" secondAttribute="top" constant="26" id="TS3-Td-Yx3"/>
                                             <constraint firstItem="VbH-d9-HXm" firstAttribute="top" secondItem="8FM-V2-BR5" secondAttribute="top" type="default" id="hjt-sd-Rbs"/>
                                             <constraint firstItem="sax-uh-GfS" firstAttribute="centerX" secondItem="8FM-V2-BR5" secondAttribute="centerX" type="default" id="ycf-l6-1cB"/>
                                         </constraints>
@@ -1758,6 +1764,104 @@
         <image name="aFrame.png" width="160" height="100"/>
         <image name="camera.png" width="200" height="200"/>
     </resources>
+    <classes>
+        <class className="APDetailInfoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APDetailInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="address" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="birthday" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="email" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lastName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="phoneNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="school" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="APDetailStepThreeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APDetailStepThreeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bestMemoryTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="ifIGotaWishTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="whenIGrowUpTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="APDetailStepTwoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APDetailStepTwoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="favColorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favMovieLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favMusicLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favTvLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favWebLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hobbyLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="APEditFriendViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditFriendViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveFriend:"/>
+                <relationship kind="action" name="takePic:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="birtday" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lastName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="school" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="APEditMeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditMeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveMe:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="birthday" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="school" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="APEditStepThreeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditStepThreeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveFriend:"/>
+                <relationship kind="outlet" name="aWishTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="bestMemoryTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="whenIgrowUpTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="APEditStepTwoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditStepTwoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveFriend:"/>
+                <relationship kind="outlet" name="favColorLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="favMovieLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="favMusicLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="favTvLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="favWebLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hobbyLabel" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="APFriendListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APFriendListCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="firstNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lastNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="APMyFriendsListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APMyFriendsListViewController.h"/>
+        </class>
+        <class className="APViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -33,21 +33,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _hobbuLabel.delegate = self;
+    _hobbyLabel.delegate = self;
     _favColorLabel.delegate = self;
     _favMovieLabel.delegate = self;
     _favMusicLabel.delegate = self;
     _favTvLabel.delegate = self;
     _favWebLabel.delegate = self;
     
-    
-    _hobbuLabel.text = _currentFriend.hobby;
+    if (_editMode) {
+    _hobbyLabel.text = _currentFriend.hobby;
     _favColorLabel.text = _currentFriend.favoriteColor;
     _favMovieLabel.text =_currentFriend.favoriteMovie;
     _favMusicLabel.text = _currentFriend.favoriteMusic;
     _favTvLabel.text = _currentFriend.favoriteTVShow;
     _favWebLabel.text = _currentFriend.favoriteWebsite;
-
+    }
 
 if (_editMode) {
     //set text on labels
@@ -67,7 +67,7 @@ if (_editMode) {
 
 - (IBAction)saveFriend:(id)sender {
 //    if (_editMode) {
-    _currentFriend.hobby = _hobbuLabel.text;
+    _currentFriend.hobby = _hobbyLabel.text;
     _currentFriend.favoriteColor = _favColorLabel.text;
     _currentFriend.favoriteMusic = _favMusicLabel.text;
     _currentFriend.favoriteMovie = _favMovieLabel.text;

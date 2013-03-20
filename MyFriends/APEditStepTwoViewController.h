@@ -13,7 +13,7 @@
 @property (weak, nonatomic) Friend *currentFriend;
 @property BOOL editMode;
 
-@property (weak, nonatomic) IBOutlet UITextField *hobbuLabel;
+@property (weak, nonatomic) IBOutlet UITextField *hobbyLabel;
 @property (weak, nonatomic) IBOutlet UITextField *favColorLabel;
 
 @property (weak, nonatomic) IBOutlet UITextField *favMusicLabel;
