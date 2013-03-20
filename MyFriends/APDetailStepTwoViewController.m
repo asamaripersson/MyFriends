@@ -27,7 +27,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    _testLabel.text = _currentFriend.firstName;
     [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s hobbies",_currentFriend.firstName]];
 
 }

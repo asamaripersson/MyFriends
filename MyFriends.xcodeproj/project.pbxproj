@@ -33,6 +33,7 @@
 		1C4B4447169080E7008D1823 /* APMyFriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4B4446169080E7008D1823 /* APMyFriendsListViewController.m */; };
 		1C52F14516BD168F00A846DA /* APEditMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C52F14416BD168F00A846DA /* APEditMeViewController.m */; };
 		1C52F14B16BD17A300A846DA /* APMeStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C52F14A16BD17A300A846DA /* APMeStorage.m */; };
+		1C574B5716F9015A00F7A169 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C574B5616F9015A00F7A169 /* QuartzCore.framework */; };
 		1C5AA60F16C7A356006A972E /* fille.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C5AA60E16C7A356006A972E /* fille.jpg */; };
 		1C5AA61A16C7B291006A972E /* APImageStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5AA61916C7B291006A972E /* APImageStorage.m */; };
 		1C82374816EBE890000459EB /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C82374716EBE890000459EB /* camera.png */; };
@@ -84,6 +85,7 @@
 		1C52F14416BD168F00A846DA /* APEditMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APEditMeViewController.m; sourceTree = "<group>"; };
 		1C52F14916BD17A300A846DA /* APMeStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMeStorage.h; sourceTree = "<group>"; };
 		1C52F14A16BD17A300A846DA /* APMeStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMeStorage.m; sourceTree = "<group>"; };
+		1C574B5616F9015A00F7A169 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1C5AA60E16C7A356006A972E /* fille.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fille.jpg; sourceTree = "<group>"; };
 		1C5AA61816C7B291006A972E /* APImageStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APImageStorage.h; sourceTree = "<group>"; };
 		1C5AA61916C7B291006A972E /* APImageStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APImageStorage.m; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C574B5716F9015A00F7A169 /* QuartzCore.framework in Frameworks */,
 				1C4B444416908098008D1823 /* CoreData.framework in Frameworks */,
 				1C4B4418169074C8008D1823 /* UIKit.framework in Frameworks */,
 				1C4B441A169074C8008D1823 /* Foundation.framework in Frameworks */,
@@ -157,6 +160,7 @@
 		1C4B4408169074C8008D1823 = {
 			isa = PBXGroup;
 			children = (
+				1C574B5616F9015A00F7A169 /* QuartzCore.framework */,
 				1C4B441D169074C8008D1823 /* MyFriends */,
 				1C4B4416169074C8008D1823 /* Frameworks */,
 				1C4B4414169074C8008D1823 /* Products */,

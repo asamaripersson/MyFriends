@@ -27,7 +27,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    _test.text= _currentFriend.firstName;
     [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s thoghts",_currentFriend.firstName]];}
 
 - (void)didReceiveMemoryWarning

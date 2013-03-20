@@ -5,7 +5,6 @@
 //  Created by Åsa Persson on 2012-12-30.
 //
 //
-
 #import "APAppDelegate.h"
 
 @implementation APAppDelegate
@@ -13,6 +12,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:999.0/006.0 green:000.0/111.0 blue:000.0/222.0 alpha:1.0]];
+    
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                           [UIFont fontWithName:@"Helvetica Neue" size:20.0f], UITextAttributeFont,
                                                           [UIColor whiteColor], UITextAttributeTextColor,

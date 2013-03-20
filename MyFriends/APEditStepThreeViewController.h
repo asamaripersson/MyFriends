@@ -11,5 +11,11 @@
 @interface APEditStepThreeViewController : UITableViewController
 @property (weak, nonatomic) Friend *currentFriend;
 @property BOOL editMode;
+@property (weak, nonatomic) IBOutlet UITextView *bestMemoryTextView;
+
+@property (weak, nonatomic) IBOutlet UITextView *aWishTextView;
+
+@property (weak, nonatomic) IBOutlet UITextView *whenIgrowUpTextView;
+
 
 @end

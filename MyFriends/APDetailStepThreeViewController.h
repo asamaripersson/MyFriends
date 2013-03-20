@@ -12,8 +12,10 @@
 @interface APDetailStepThreeViewController : UITableViewController
 @property (weak, nonatomic) Friend *currentFriend;
 
-@property (weak, nonatomic) IBOutlet UILabel *test;
 
+@property (weak, nonatomic) IBOutlet UITextView *bestMemoryTextView;
 
+@property (weak, nonatomic) IBOutlet UITextView *ifIGotaWishTextView;
+@property (weak, nonatomic) IBOutlet UITextView *whenIGrowUpTextView;
 
 @end
