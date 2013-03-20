@@ -807,7 +807,6 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bO3-Tk-EGR">
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="300" id="dsW-mb-nIq"/>
                                                         <constraint firstAttribute="height" constant="96" id="tQ2-ee-A5T"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -825,8 +824,9 @@
                                         <constraints>
                                             <constraint firstItem="mgn-VB-FIq" firstAttribute="leading" secondItem="iNS-4Y-ITS" secondAttribute="leading" constant="20" type="default" id="5t7-H7-Yvf"/>
                                             <constraint firstItem="bO3-Tk-EGR" firstAttribute="top" secondItem="iNS-4Y-ITS" secondAttribute="top" constant="27" id="Aw5-Vi-daR"/>
+                                            <constraint firstItem="bO3-Tk-EGR" firstAttribute="leading" secondItem="iNS-4Y-ITS" secondAttribute="leading" constant="20" type="default" id="VEt-q2-9vJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="bO3-Tk-EGR" secondAttribute="trailing" constant="20" type="default" id="egt-mp-nRr"/>
                                             <constraint firstItem="mgn-VB-FIq" firstAttribute="top" secondItem="iNS-4Y-ITS" secondAttribute="top" constant="7" id="fyG-yF-SJa"/>
-                                            <constraint firstItem="bO3-Tk-EGR" firstAttribute="centerX" secondItem="iNS-4Y-ITS" secondAttribute="centerX" type="default" id="rEe-HQ-G46"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="125" id="Bso-SP-l1B">
@@ -840,7 +840,6 @@
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="LLa-pN-zFI"/>
-                                                        <constraint firstAttribute="width" constant="300" id="dso-YD-yYQ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -858,7 +857,8 @@
                                         </view>
                                         <color key="backgroundColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="M9p-0s-crC" firstAttribute="centerX" secondItem="Bso-SP-l1B" secondAttribute="centerX" type="default" id="0Pd-7Y-bD5"/>
+                                            <constraint firstAttribute="trailing" secondItem="M9p-0s-crC" secondAttribute="trailing" constant="20" type="default" id="98P-bU-tGl"/>
+                                            <constraint firstItem="M9p-0s-crC" firstAttribute="leading" secondItem="Bso-SP-l1B" secondAttribute="leading" constant="20" type="default" id="Sbm-TH-VTD"/>
                                             <constraint firstItem="H5E-e4-kVh" firstAttribute="leading" secondItem="Bso-SP-l1B" secondAttribute="leading" constant="20" type="default" id="VNB-HI-WHB"/>
                                             <constraint firstItem="H5E-e4-kVh" firstAttribute="top" secondItem="Bso-SP-l1B" secondAttribute="top" type="default" id="fYT-pj-RSk"/>
                                             <constraint firstItem="M9p-0s-crC" firstAttribute="top" secondItem="Bso-SP-l1B" secondAttribute="top" constant="26" id="mKF-j7-tQI"/>
@@ -875,7 +875,6 @@
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="GGM-xb-PBi"/>
-                                                        <constraint firstAttribute="width" constant="300" id="rgy-cf-nt6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -896,7 +895,8 @@
                                             <constraint firstItem="atF-0w-afK" firstAttribute="top" secondItem="QkR-0M-1Eq" secondAttribute="top" constant="26" id="8u0-Pv-p5l"/>
                                             <constraint firstItem="t9a-fl-Nyp" firstAttribute="leading" secondItem="QkR-0M-1Eq" secondAttribute="leading" constant="20" type="default" id="Odo-70-jYx"/>
                                             <constraint firstItem="t9a-fl-Nyp" firstAttribute="top" secondItem="QkR-0M-1Eq" secondAttribute="top" type="default" id="bmd-Bj-bX7"/>
-                                            <constraint firstItem="atF-0w-afK" firstAttribute="centerX" secondItem="QkR-0M-1Eq" secondAttribute="centerX" type="default" id="yhI-Lc-Z8c"/>
+                                            <constraint firstItem="atF-0w-afK" firstAttribute="leading" secondItem="QkR-0M-1Eq" secondAttribute="leading" constant="20" type="default" id="vTj-Fj-lLW"/>
+                                            <constraint firstAttribute="trailing" secondItem="atF-0w-afK" secondAttribute="trailing" constant="20" type="default" id="yPC-ci-bl4"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="p3V-Ry-0f4">
@@ -995,8 +995,9 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNO-IW-JAd">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="6XJ-v9-xdk"/>
+                                                        <constraint firstAttribute="height" constant="21" id="nHC-ZH-gQH"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1006,7 +1007,7 @@
                                                         <constraint firstAttribute="width" constant="123" id="bSC-z6-E2O"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1029,9 +1030,10 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oX-dH-CsG">
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="JSO-gK-0Jw"/>
                                                         <constraint firstAttribute="width" constant="180" id="Jxm-57-HrL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1041,7 +1043,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="pBL-Nc-Ncm"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1064,9 +1066,10 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-qr-qAx">
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="7Ym-wB-YC5"/>
                                                         <constraint firstAttribute="width" constant="180" id="QUf-gI-3Ky"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1076,7 +1079,7 @@
                                                         <constraint firstAttribute="width" constant="123" id="QS9-o4-bhf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1099,9 +1102,10 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaC-tA-L5d">
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="ZZ2-lw-nBW"/>
                                                         <constraint firstAttribute="width" constant="180" id="tS3-n2-ll2"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1111,7 +1115,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="9pb-Ew-0Iw"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1135,8 +1139,9 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrC-ej-26v">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="Ys2-bx-UuN"/>
+                                                        <constraint firstAttribute="height" constant="21" id="fM3-yG-IJ6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1146,7 +1151,7 @@
                                                         <constraint firstAttribute="width" constant="123" id="pmg-KT-EaZ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1155,7 +1160,7 @@
                                         <color key="backgroundColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="KrC-ej-26v" firstAttribute="leading" secondItem="Ygp-a6-XzC" secondAttribute="leading" constant="110" id="NPh-Ng-7hF"/>
-                                            <constraint firstItem="KrC-ej-26v" firstAttribute="top" secondItem="Ygp-a6-XzC" secondAttribute="top" constant="15" id="aC7-2I-oQS"/>
+                                            <constraint firstItem="KrC-ej-26v" firstAttribute="top" secondItem="Ygp-a6-XzC" secondAttribute="top" constant="11" id="Xgw-4R-CK7"/>
                                             <constraint firstItem="Xd9-vA-l6j" firstAttribute="leading" secondItem="Ygp-a6-XzC" secondAttribute="leading" constant="20" type="default" id="cQX-bF-zsI"/>
                                             <constraint firstItem="Xd9-vA-l6j" firstAttribute="top" secondItem="Ygp-a6-XzC" secondAttribute="top" constant="-1" id="igW-BP-92g"/>
                                         </constraints>
@@ -1170,8 +1175,9 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aY-ze-XST">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="8kk-8t-eYD"/>
+                                                        <constraint firstAttribute="height" constant="21" id="aCX-BR-AKs"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1181,7 +1187,7 @@
                                                         <constraint firstAttribute="width" constant="123" id="mSp-4H-lqR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1205,8 +1211,9 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBb-k8-DHj">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="5tt-6r-Xm2"/>
+                                                        <constraint firstAttribute="height" constant="21" id="LaC-CW-AIK"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1216,7 +1223,7 @@
                                                         <constraint firstAttribute="width" constant="96" id="tcD-19-uZA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1226,8 +1233,8 @@
                                         <constraints>
                                             <constraint firstItem="o60-mR-chJ" firstAttribute="leading" secondItem="bfZ-Y2-SSy" secondAttribute="leading" constant="20" type="default" id="3c5-7j-PuB"/>
                                             <constraint firstItem="JBb-k8-DHj" firstAttribute="leading" secondItem="bfZ-Y2-SSy" secondAttribute="leading" constant="110" id="3dX-78-WyY"/>
-                                            <constraint firstItem="JBb-k8-DHj" firstAttribute="top" secondItem="bfZ-Y2-SSy" secondAttribute="top" constant="15" id="GGb-i2-RHw"/>
                                             <constraint firstItem="o60-mR-chJ" firstAttribute="top" secondItem="bfZ-Y2-SSy" secondAttribute="top" type="default" id="RrL-pk-9Zm"/>
+                                            <constraint firstItem="JBb-k8-DHj" firstAttribute="top" secondItem="bfZ-Y2-SSy" secondAttribute="top" constant="11" id="uDs-BX-JcZ"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -1320,21 +1327,22 @@
                                             <rect key="frame" x="10" y="1" width="300" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hobby:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faW-Fm-IWt">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hobby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faW-Fm-IWt">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="63" id="5Lt-Gh-ldd"/>
                                                         <constraint firstAttribute="height" constant="21" id="QCU-BJ-Fak"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDf-aa-f0b">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="oBn-aH-Hae"/>
+                                                        <constraint firstAttribute="height" constant="21" id="uNA-j5-NVl"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
@@ -1361,14 +1369,15 @@
                                                         <constraint firstAttribute="height" constant="21" id="jnQ-4I-uTm"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fn-xV-mLe">
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="3td-8x-7Kb"/>
                                                         <constraint firstAttribute="width" constant="180" id="hNs-4s-mFL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -1396,14 +1405,15 @@
                                                         <constraint firstAttribute="width" constant="125" id="808-Qu-IYg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV1-3L-6z9">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="3ad-Vn-qIP"/>
+                                                        <constraint firstAttribute="height" constant="21" id="6X9-Zy-s0i"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -1431,14 +1441,15 @@
                                                         <constraint firstAttribute="width" constant="126" id="zvm-UM-liX"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhZ-MR-aA8">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="JQ5-jh-pw8"/>
+                                                        <constraint firstAttribute="height" constant="21" id="Ncq-PK-Gbz"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -1466,14 +1477,15 @@
                                                         <constraint firstAttribute="height" constant="21" id="gZF-a7-oeR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-7d-WaK">
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="bcp-6B-MLq"/>
                                                         <constraint firstAttribute="width" constant="180" id="zTC-1h-sF4"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -1501,14 +1513,15 @@
                                                         <constraint firstAttribute="width" constant="102" id="rUr-nk-W7N"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cK-Oh-Z0X">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="ErG-QW-dov"/>
+                                                        <constraint firstAttribute="height" constant="21" id="rae-Ge-6cy"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -1595,17 +1608,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CN4-wd-Res">
-                                                    <color key="backgroundColor" red="0.95669162269999997" green="0.45672553780000003" blue="0.4583898783" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="Nvz-cn-aGe"/>
-                                                        <constraint firstAttribute="width" constant="300" id="RxA-UO-tuG"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Best Memory with Owner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzC-Pc-5rM">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
@@ -1614,8 +1625,9 @@
                                         <color key="backgroundColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="PzC-Pc-5rM" firstAttribute="top" secondItem="LAB-GN-nLp" secondAttribute="top" constant="7" id="858-23-fye"/>
+                                            <constraint firstAttribute="trailing" secondItem="CN4-wd-Res" secondAttribute="trailing" constant="20" type="default" id="B0P-hh-sGH"/>
+                                            <constraint firstItem="CN4-wd-Res" firstAttribute="leading" secondItem="LAB-GN-nLp" secondAttribute="leading" constant="20" type="default" id="LaN-Ao-Ghv"/>
                                             <constraint firstItem="CN4-wd-Res" firstAttribute="top" secondItem="LAB-GN-nLp" secondAttribute="top" constant="29" id="MEa-V1-Mgh"/>
-                                            <constraint firstItem="CN4-wd-Res" firstAttribute="centerX" secondItem="LAB-GN-nLp" secondAttribute="centerX" type="default" id="ZyT-AZ-pJn"/>
                                             <constraint firstItem="PzC-Pc-5rM" firstAttribute="leading" secondItem="LAB-GN-nLp" secondAttribute="leading" constant="20" type="default" id="ieZ-uT-Exg"/>
                                         </constraints>
                                     </tableViewCell>
@@ -1627,12 +1639,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAv-5T-JcJ">
-                                                    <color key="backgroundColor" red="0.95669162269999997" green="0.45672553780000003" blue="0.4583898783" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="CKr-Ak-giz"/>
-                                                        <constraint firstAttribute="width" constant="300" id="mIs-zF-Qem"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="If I got one wish..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRq-d0-yyd">
@@ -1640,7 +1650,7 @@
                                                         <constraint firstAttribute="width" constant="211" id="2iU-dp-cIB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
@@ -1651,7 +1661,8 @@
                                             <constraint firstItem="dRq-d0-yyd" firstAttribute="top" secondItem="iJQ-hN-0Dv" secondAttribute="top" type="default" id="DSW-vZ-6D6"/>
                                             <constraint firstItem="dRq-d0-yyd" firstAttribute="leading" secondItem="iJQ-hN-0Dv" secondAttribute="leading" constant="20" type="default" id="HYs-ZX-b39"/>
                                             <constraint firstItem="GAv-5T-JcJ" firstAttribute="top" secondItem="iJQ-hN-0Dv" secondAttribute="top" constant="26" id="LHg-il-Al5"/>
-                                            <constraint firstItem="GAv-5T-JcJ" firstAttribute="centerX" secondItem="iJQ-hN-0Dv" secondAttribute="centerX" type="default" id="Vf7-MC-SHy"/>
+                                            <constraint firstAttribute="trailing" secondItem="GAv-5T-JcJ" secondAttribute="trailing" constant="20" type="default" id="bfw-y6-WpY"/>
+                                            <constraint firstItem="GAv-5T-JcJ" firstAttribute="leading" secondItem="iJQ-hN-0Dv" secondAttribute="leading" constant="20" type="default" id="oJ2-GE-ORr"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="125" id="8FM-V2-BR5">
@@ -1662,12 +1673,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sax-uh-GfS">
-                                                    <color key="backgroundColor" red="0.95669162269999997" green="0.45672553780000003" blue="0.4583898783" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="fUy-EH-0kU"/>
-                                                        <constraint firstAttribute="width" constant="300" id="yfW-r1-kmQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="When I grow upp I wanna..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbH-d9-HXm">
@@ -1675,7 +1684,7 @@
                                                         <constraint firstAttribute="width" constant="246" id="lVX-7A-gGx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
@@ -1685,8 +1694,9 @@
                                         <constraints>
                                             <constraint firstItem="sax-uh-GfS" firstAttribute="top" secondItem="8FM-V2-BR5" secondAttribute="top" constant="28" id="As3-Kf-7nw"/>
                                             <constraint firstItem="VbH-d9-HXm" firstAttribute="leading" secondItem="8FM-V2-BR5" secondAttribute="leading" constant="20" type="default" id="F4c-Ht-Rcb"/>
+                                            <constraint firstAttribute="trailing" secondItem="sax-uh-GfS" secondAttribute="trailing" constant="20" type="default" id="QMA-Ah-Rgo"/>
+                                            <constraint firstItem="sax-uh-GfS" firstAttribute="leading" secondItem="8FM-V2-BR5" secondAttribute="leading" constant="20" type="default" id="VXc-6j-9a7"/>
                                             <constraint firstItem="VbH-d9-HXm" firstAttribute="top" secondItem="8FM-V2-BR5" secondAttribute="top" type="default" id="hjt-sd-Rbs"/>
-                                            <constraint firstItem="sax-uh-GfS" firstAttribute="centerX" secondItem="8FM-V2-BR5" secondAttribute="centerX" type="default" id="ycf-l6-1cB"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="oXU-6O-wh9">
