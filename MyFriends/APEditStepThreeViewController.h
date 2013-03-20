@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class Friend;
-@interface APEditStepThreeViewController : UITableViewController
+
+@interface APEditStepThreeViewController : UITableViewController <UITextViewDelegate>
+
 @property (weak, nonatomic) Friend *currentFriend;
+
 @property BOOL editMode;
 @property (weak, nonatomic) IBOutlet UITextView *bestMemoryTextView;
 

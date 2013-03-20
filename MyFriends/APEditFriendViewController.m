@@ -124,7 +124,7 @@
             [[APImageStorage defaultImageStore] setImage:aNewImage
                                                   forKey:aNewImageKey];
         }
-             [[self navigationController]popViewControllerAnimated:YES];
+//             [[self navigationController]popViewControllerAnimated:YES];
         }
     }
     
