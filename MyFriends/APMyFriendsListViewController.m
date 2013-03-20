@@ -25,6 +25,7 @@
 @implementation APMyFriendsListViewController
 {
     Friend *currentFriend;
+    UITabBarController *tbc;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -32,7 +33,7 @@
     
 
     if ([segue.identifier isEqualToString:@"detailInfoSegue"]) {
-         UITabBarController *tbc = [segue destinationViewController];
+         tbc = [segue destinationViewController];
         
         APDetailInfoViewController *divc = [[tbc viewControllers] objectAtIndex:0];
         APDetailStepTwoViewController *dsTwovc = [[tbc viewControllers] objectAtIndex:1];
@@ -53,11 +54,14 @@
 
     if ([segue.identifier isEqualToString:@"addFriendSegue"]) {
        // UITabBarController *tbc = [segue destinationViewController];
-        
 
         __unused APEditFriendViewController *efVc = [segue destinationViewController];
+        UIBarButtonItem *anewBackButton = [[UIBarButtonItem alloc] initWithTitle: @"CANCEL" style: UIBarButtonItemStyleBordered target: nil action: nil];
         
-//        //TODO: set tabbar vc different to avoid warnings (or __unused??)
+        [[tbc navigationItem] setLeftBarButtonItem: anewBackButton];
+        
+      
+        
 //       __unused APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
 //       __unused APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
 //        __unused APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];

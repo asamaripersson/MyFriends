@@ -57,9 +57,7 @@
         
     thereIsANewImage = NO;
         
-        UIBarButtonItem *anewBackButton = [[UIBarButtonItem alloc] initWithTitle: @"CANCEL" style: UIBarButtonItemStyleBordered target: nil action: nil];
-        
-        [[self navigationItem] setBackBarButtonItem: anewBackButton];
+     
         
        _nextBtnLable.text = @"Next";
         //TODO: hide tabbar when creating new??????

@@ -323,7 +323,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="lE0-RY-PNb">
-                                        <rect key="frame" x="0.0" y="363" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="363" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -608,7 +608,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VMc-MG-ss0">
-                                        <rect key="frame" x="0.0" y="408" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="408" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -1329,7 +1329,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bfZ-Y2-SSy">
-                                        <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="411" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -1910,7 +1910,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="c5H-HN-RNd"/>
-        <segue reference="AwI-jv-RTL"/>
-        <segue reference="wCB-s2-YPZ"/>
+        <segue reference="cVc-PQ-T3u"/>
+        <segue reference="ayT-t3-KWg"/>
     </inferredMetricsTieBreakers>
 </document>
