@@ -7,6 +7,7 @@
 //
 
 #import "APEditStepThreeViewController.h"
+#import "Friend.h"
 
 @interface APEditStepThreeViewController ()
 
@@ -46,4 +47,12 @@
 
 
 
+- (IBAction)saveFriend:(id)sender {
+//    if (_editMode) {
+        _currentFriend.bestMemory = _bestMemoryTextView.text;
+        _currentFriend.whenIgrowUp = _whenIgrowUpTextView.text;
+        _currentFriend.ifIgotOneWish = _aWishTextView.text;
+//    }
+   
+}
 @end

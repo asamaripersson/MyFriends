@@ -27,7 +27,11 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s thoghts",_currentFriend.firstName]];}
+    [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s thoghts",_currentFriend.firstName]];
+    _bestMemoryTextView.text =_currentFriend.bestMemory;
+    _whenIGrowUpTextView.text = _currentFriend.whenIgrowUp;
+    _ifIGotaWishTextView.text = _currentFriend.ifIgotOneWish;
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -28,7 +28,12 @@
 {
     [super viewWillAppear:YES];
     [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s hobbies",_currentFriend.firstName]];
-
+    _hobbyLabel.text = _currentFriend.hobby;
+    _favColorLabel.text = _currentFriend.favoriteColor;
+    _favMovieLabel.text =_currentFriend.favoriteMovie;
+    _favMusicLabel.text = _currentFriend.favoriteMusic;
+    _favTvLabel.text = _currentFriend.favoriteTVShow;
+    _favWebLabel.text = _currentFriend.favoriteWebsite;
 }
 
 - (void)didReceiveMemoryWarning

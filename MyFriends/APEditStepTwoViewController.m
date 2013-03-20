@@ -7,6 +7,7 @@
 //
 
 #import "APEditStepTwoViewController.h"
+#import "Friend.h"
 
 @interface APEditStepTwoViewController ()
 
@@ -24,13 +25,14 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-//        [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s thoghts",_currentFriend.firstName]];
        [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP TWO"];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+if (_editMode) {
+    //set text on labels
+}
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -44,4 +46,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)saveFriend:(id)sender {
+//    if (_editMode) {
+    _currentFriend.hobby = _hobbuLabel.text;
+    _currentFriend.favoriteColor = _favColorLabel.text;
+    _currentFriend.favoriteMovie = _favMusicLabel.text;
+    _currentFriend.favoriteMovie = _favMovieLabel.text;
+    _currentFriend.favoriteTVShow = _favTvLabel.text;
+    _currentFriend.favoriteWebsite = _favWebLabel.text;
+//    }
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

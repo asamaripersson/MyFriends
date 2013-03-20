@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 @class Friend;
-@interface APEditStepTwoViewController : UITableViewController
+@interface APEditStepTwoViewController : UITableViewController <UITextFieldDelegate>
+
 @property (weak, nonatomic) Friend *currentFriend;
 @property BOOL editMode;
 
@@ -23,6 +24,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *favWebLabel;
 
+- (IBAction)saveFriend:(id)sender;
 
 
 @end

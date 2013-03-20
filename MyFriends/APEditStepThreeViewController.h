@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *aWishTextView;
 
 @property (weak, nonatomic) IBOutlet UITextView *whenIgrowUpTextView;
+- (IBAction)saveFriend:(id)sender;
 
 
 @end
