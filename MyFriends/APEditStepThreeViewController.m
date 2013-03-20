@@ -8,6 +8,8 @@
 
 #import "APEditStepThreeViewController.h"
 #import "Friend.h"
+#import "APImageStorage.h"
+#import "APFriendStorage.h"
 
 @interface APEditStepThreeViewController ()
 
@@ -52,9 +54,39 @@
 
 - (IBAction)saveFriend:(id)sender {
 //    if (_editMode) {
-        _currentFriend.bestMemory = _bestMemoryTextView.text;
-        _currentFriend.whenIgrowUp = _whenIgrowUpTextView.text;
-        _currentFriend.ifIgotOneWish = _aWishTextView.text;
+    
+    _currentFriend.bestMemory = _bestMemoryTextView.text;
+    _currentFriend.whenIgrowUp = _whenIgrowUpTextView.text;
+    _currentFriend.ifIgotOneWish = _aWishTextView.text;
+    
+    [[APFriendStorage sharedStorage] createFriendWithName:_currentFriend.firstName
+                                                 lastname:_currentFriend.lastName
+                                                 birthDay:_currentFriend.birthDay
+                                                  address:_currentFriend.address
+                                                    email:_currentFriend.email
+                                                   school:_currentFriend.school
+                                                    hobby:_currentFriend.hobby
+                                            favoriteColor:_currentFriend.favoriteColor
+                                            favoriteMovie:_currentFriend.favoriteMovie
+                                            favoriteMusic:_currentFriend.favoriteMusic
+                                           favoriteTvShow:_currentFriend.favoriteTVShow
+                                                    image:nil
+                                                 imageKey:_currentFriend.imageKey
+                                          favoriteWebsite:_currentFriend.favoriteWebsite
+                                               bestMemory:_currentFriend.bestMemory
+                                              whenIgrowUp:_currentFriend.whenIgrowUp
+                                            ifIgotOneWish:_currentFriend.ifIgotOneWish
+                                              phonenumber:_currentFriend.phoneNumber];
+    
+    
+     
+    
+    //TODO:
+//    [[APImageStorage defaultImageStore] setImage:aNewImage
+//                                          forKey:aNewImageKey];
+
+    
+    
 //    }
    
 }

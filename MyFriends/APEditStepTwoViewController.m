@@ -8,6 +8,7 @@
 
 #import "APEditStepTwoViewController.h"
 #import "Friend.h"
+#import "APEditStepThreeViewController.h"
 
 @interface APEditStepTwoViewController ()
 
@@ -24,7 +25,21 @@
     return self;
 }
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"createStepThreeSeg"]) {
+        //        UITabBarController *tbc = [segue destinationViewController];
+        //
+        //        APDetailInfoViewController *divc = [[tbc viewControllers] objectAtIndex:0];
+        //        APDetailStepTwoViewController *dsTwovc = [[tbc viewControllers] objectAtIndex:1];
+        //        APDetailStepThreeViewController *dsThreevc = [[tbc viewControllers] objectAtIndex:2];
+        //        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        
+        APEditStepThreeViewController *esThreeVc = [segue destinationViewController];
+        [esThreeVc setCurrentFriend:_currentFriend];
+    }
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -65,18 +80,6 @@ if (_editMode) {
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)saveFriend:(id)sender {
-//    if (_editMode) {
-    _currentFriend.hobby = _hobbyLabel.text;
-    _currentFriend.favoriteColor = _favColorLabel.text;
-    _currentFriend.favoriteMusic = _favMusicLabel.text;
-    _currentFriend.favoriteMovie = _favMovieLabel.text;
-    _currentFriend.favoriteTVShow = _favTvLabel.text;
-    _currentFriend.favoriteWebsite = _favWebLabel.text;
-//    }
-    
-}
-
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -85,4 +88,16 @@ if (_editMode) {
     return YES;
 }
 
+- (IBAction)next:(id)sender {
+    //    if (_editMode) {
+    _currentFriend.hobby = _hobbyLabel.text;
+    _currentFriend.favoriteColor = _favColorLabel.text;
+    _currentFriend.favoriteMusic = _favMusicLabel.text;
+    _currentFriend.favoriteMovie = _favMovieLabel.text;
+    _currentFriend.favoriteTVShow = _favTvLabel.text;
+    _currentFriend.favoriteWebsite = _favWebLabel.text;
+    
+      [[self navigationController] performSegueWithIdentifier:@"createStepThreeSeg" sender:self];
+    //    }
+}
 @end

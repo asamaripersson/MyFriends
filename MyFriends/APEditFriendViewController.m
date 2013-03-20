@@ -11,6 +11,8 @@
 #import "Friend.h"
 #import "APFriendStorage.h"
 #import "APImageStorage.h"
+#import "APEditStepTwoViewController.h"
+
 @interface APEditFriendViewController ()
 
 @end
@@ -21,6 +23,22 @@
     UIImage *aNewImage;
     BOOL thereIsANewImage;
 }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"createStepTwoSeg"]) {
+//        UITabBarController *tbc = [segue destinationViewController];
+//        
+//        APDetailInfoViewController *divc = [[tbc viewControllers] objectAtIndex:0];
+//        APDetailStepTwoViewController *dsTwovc = [[tbc viewControllers] objectAtIndex:1];
+//        APDetailStepThreeViewController *dsThreevc = [[tbc viewControllers] objectAtIndex:2];
+//        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        
+        APEditStepTwoViewController *esTwoVc = [segue destinationViewController];
+        [esTwoVc setCurrentFriend:_currentFriend];
+       }
+}
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -71,7 +89,8 @@
     [textField resignFirstResponder];
     return YES;
 }
-- (IBAction)saveFriend:(id)sender {
+
+- (IBAction)nextStep:(id)sender {
     
     if (_editMode) {
          _currentFriend.firstName = _firstName.text;
@@ -99,35 +118,45 @@
             [alert show];
         } else {
         
-   _currentFriend = [[APFriendStorage sharedStorage] createFriendWithName:_firstName.text
-                                                                     lastname:_lastName.text
-                                                                     birthDay:_birtday.text
-                                                                      address:_address.text
-                                                                        email:_email.text
-                                                                       school:_school.text
-                                                                        hobby:@""
-                                                                favoriteColor:@""
-                                                                favoriteMovie:@""
-                                                                favoriteMusic:@""
-                                                               favoriteTvShow:@""
-                                                                        image:nil
-                                                                     imageKey:nil
-                                                              favoriteWebsite:@""
-                                                                   bestMemory:@""
-                                                                  whenIgrowUp:@""
-                                                                ifIgotOneWish:@""
-                                                                  phonenumber:nil];
+//   _currentFriend = [[APFriendStorage sharedStorage] createFriendWithName:_firstName.text
+//                                                                     lastname:_lastName.text
+//                                                                     birthDay:_birtday.text
+//                                                                      address:_address.text
+//                                                                        email:_email.text
+//                                                                       school:_school.text
+//                                                                        hobby:@""
+//                                                                favoriteColor:@""
+//                                                                favoriteMovie:@""
+//                                                                favoriteMusic:@""
+//                                                               favoriteTvShow:@""
+//                                                                        image:nil
+//                                                                     imageKey:nil
+//                                                              favoriteWebsite:@""
+//                                                                   bestMemory:@""
+//                                                                  whenIgrowUp:@""
+//                                                                ifIgotOneWish:@""
+//                                                                  phonenumber:nil];
+            _currentFriend.firstName = _firstName.text;
+            _currentFriend.lastName = _lastName.text;
+            _currentFriend.birthDay =_birtday.text;
+            _currentFriend.address =_address.text;
+            _currentFriend.email =_email.text;
+            _currentFriend.school =_school.text;
+            _currentFriend.phoneNumber = [NSNumber numberWithInt:[_phoneNumber.text intValue]];
         
         if (thereIsANewImage) {
             [_currentFriend setImageKey:aNewImageKey];
-            
+
+            //TODO: set image in step three
             [[APImageStorage defaultImageStore] setImage:aNewImage
                                                   forKey:aNewImageKey];
         }
 //             [[self navigationController]popViewControllerAnimated:YES];
+            [[self navigationController] performSegueWithIdentifier:@"createStepTwoSeg" sender:self];
         }
     }
     
+
 }
 
 - (void)removeFriend

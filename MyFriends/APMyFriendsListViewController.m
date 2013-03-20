@@ -52,13 +52,15 @@
     }
 
     if ([segue.identifier isEqualToString:@"addFriendSegue"]) {
-        UITabBarController *tbc = [segue destinationViewController];
+       // UITabBarController *tbc = [segue destinationViewController];
         
+
+        __unused APEditFriendViewController *efVc = [segue destinationViewController];
         
-        //TODO: set tabbar vc different to avoid warnings (or __unused??)
-       __unused APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
-       __unused APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
-        __unused APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
+//        //TODO: set tabbar vc different to avoid warnings (or __unused??)
+//       __unused APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
+//       __unused APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
+//        __unused APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
         
     }
 }

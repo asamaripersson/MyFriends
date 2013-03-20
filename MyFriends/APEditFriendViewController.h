@@ -26,8 +26,9 @@ UIPopoverController *imagePickerPopover;
 @property (weak, nonatomic) IBOutlet UITextField *address;
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *school;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
 
-- (IBAction)saveFriend:(id)sender;
 
+- (IBAction)nextStep:(id)sender;
 
 @end
