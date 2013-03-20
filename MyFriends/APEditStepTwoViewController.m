@@ -9,13 +9,16 @@
 #import "APEditStepTwoViewController.h"
 #import "Friend.h"
 #import "APEditStepThreeViewController.h"
+#import "APFriendStorage.h"
 
 @interface APEditStepTwoViewController ()
 
 @end
 
 @implementation APEditStepTwoViewController
-
+{
+    Friend *newFriend;
+}
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -54,7 +57,9 @@
     _favMusicLabel.delegate = self;
     _favTvLabel.delegate = self;
     _favWebLabel.delegate = self;
-    
+    NSLog(@"MY FRIEND first name: %@ and b-day:  %@", _currentFriend.firstName, _currentFriend.birthDay);
+    newFriend = _currentFriend;
+    _nextBtnLabel.text = @"Next";
     if (_editMode) {
     _hobbyLabel.text = _currentFriend.hobby;
     _favColorLabel.text = _currentFriend.favoriteColor;
@@ -62,6 +67,7 @@
     _favMusicLabel.text = _currentFriend.favoriteMusic;
     _favTvLabel.text = _currentFriend.favoriteTVShow;
     _favWebLabel.text = _currentFriend.favoriteWebsite;
+         _nextBtnLabel.text = @"Save";
     }
 
 if (_editMode) {
@@ -90,14 +96,20 @@ if (_editMode) {
 
 - (IBAction)next:(id)sender {
     //    if (_editMode) {
-    _currentFriend.hobby = _hobbyLabel.text;
-    _currentFriend.favoriteColor = _favColorLabel.text;
-    _currentFriend.favoriteMusic = _favMusicLabel.text;
-    _currentFriend.favoriteMovie = _favMovieLabel.text;
-    _currentFriend.favoriteTVShow = _favTvLabel.text;
-    _currentFriend.favoriteWebsite = _favWebLabel.text;
+    NSLog(@"MY FRIEND MUSIC: %@", _currentFriend.favoriteMusic);
+    NSLog(@"MY FRIEND first name: %@", _currentFriend.firstName);
+    newFriend.hobby = _hobbyLabel.text;
+    newFriend.favoriteColor = _favColorLabel.text;
+    newFriend.favoriteMusic = _favMusicLabel.text;
+    newFriend.favoriteMovie = _favMovieLabel.text;
+    newFriend.favoriteTVShow = _favTvLabel.text;
+    newFriend.favoriteWebsite = _favWebLabel.text;
+    NSLog(@"MY FRIEND MUSIC: %@", newFriend.favoriteMusic);
+       NSLog(@"MY FRIEND first name: %@", newFriend.firstName);
     
-      [[self navigationController] performSegueWithIdentifier:@"createStepThreeSeg" sender:self];
+//      [[self navigationController] performSegueWithIdentifier:@"createStepThreeSeg" sender:self];
+    [[[[self tabBarController] viewControllers] objectAtIndex:2] setCurrentFriend:newFriend];
+     [[self tabBarController] setSelectedIndex:2];
     //    }
 }
 @end

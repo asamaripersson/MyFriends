@@ -22,6 +22,7 @@
     NSString *aNewImageKey;
     UIImage *aNewImage;
     BOOL thereIsANewImage;
+    APEditStepTwoViewController *editStepTwoViewController;
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -52,9 +53,17 @@
     _address.delegate = self;
     _school.delegate = self;
     _email.delegate = self;
-    
+    _phoneNumber.delegate = self;
+        
     thereIsANewImage = NO;
-    
+        
+        UIBarButtonItem *anewBackButton = [[UIBarButtonItem alloc] initWithTitle: @"CANCEL" style: UIBarButtonItemStyleBordered target: nil action: nil];
+        
+        [[self navigationItem] setBackBarButtonItem: anewBackButton];
+        
+       _nextBtnLable.text = @"Next";
+        //TODO: hide tabbar when creating new??????
+        
     if (_editMode) {
         _firstName.text = _currentFriend.firstName;
         _lastName.text = _currentFriend.lastName;
@@ -62,7 +71,9 @@
         _address.text = _currentFriend.address;
         _school.text = _currentFriend.school;
         _email.text = _currentFriend.email;
+        _phoneNumber.text = [_currentFriend.phoneNumber stringValue];
         _image.image = [[APImageStorage defaultImageStore] imageForKey:_currentFriend.imageKey];
+        _nextBtnLable.text = @"Save";
 
         
         UIBarButtonItem *removeItem = [[UIBarButtonItem alloc]
@@ -118,31 +129,32 @@
             [alert show];
         } else {
         
-//   _currentFriend = [[APFriendStorage sharedStorage] createFriendWithName:_firstName.text
-//                                                                     lastname:_lastName.text
-//                                                                     birthDay:_birtday.text
-//                                                                      address:_address.text
-//                                                                        email:_email.text
-//                                                                       school:_school.text
-//                                                                        hobby:@""
-//                                                                favoriteColor:@""
-//                                                                favoriteMovie:@""
-//                                                                favoriteMusic:@""
-//                                                               favoriteTvShow:@""
-//                                                                        image:nil
-//                                                                     imageKey:nil
-//                                                              favoriteWebsite:@""
-//                                                                   bestMemory:@""
-//                                                                  whenIgrowUp:@""
-//                                                                ifIgotOneWish:@""
-//                                                                  phonenumber:nil];
-            _currentFriend.firstName = _firstName.text;
-            _currentFriend.lastName = _lastName.text;
-            _currentFriend.birthDay =_birtday.text;
-            _currentFriend.address =_address.text;
-            _currentFriend.email =_email.text;
-            _currentFriend.school =_school.text;
-            _currentFriend.phoneNumber = [NSNumber numberWithInt:[_phoneNumber.text intValue]];
+   _currentFriend = [[APFriendStorage sharedStorage] createFriendWithName:_firstName.text
+                                                                     lastname:_lastName.text
+                                                                     birthDay:_birtday.text
+                                                                      address:_address.text
+                                                                        email:_email.text
+                                                                       school:_school.text
+                                                                        hobby:@""
+                                                                favoriteColor:@""
+                                                                favoriteMovie:@""
+                                                                favoriteMusic:@""
+                                                               favoriteTvShow:@""
+                                                                        image:nil
+                                                                     imageKey:nil
+                                                              favoriteWebsite:@""
+                                                                   bestMemory:@""
+                                                                  whenIgrowUp:@""
+                                                                ifIgotOneWish:@""
+                                                                  phonenumber:[NSNumber numberWithInt:[_phoneNumber.text intValue]]];
+//            
+//            _currentFriend.firstName = _firstName.text;
+//            _currentFriend.lastName = _lastName.text;
+//            _currentFriend.birthDay =_birtday.text;
+//            _currentFriend.address =_address.text;
+//            _currentFriend.email =_email.text;
+//            _currentFriend.school =_school.text;
+//            _currentFriend.phoneNumber = [NSNumber numberWithInt:[_phoneNumber.text intValue]];
         
         if (thereIsANewImage) {
             [_currentFriend setImageKey:aNewImageKey];
@@ -152,7 +164,13 @@
                                                   forKey:aNewImageKey];
         }
 //             [[self navigationController]popViewControllerAnimated:YES];
-            [[self navigationController] performSegueWithIdentifier:@"createStepTwoSeg" sender:self];
+//            [[self navigationController] performSegueWithIdentifier:@"createStepTwoSeg" sender:self];
+//            [[[self tabBarController]navigationController] performSegueWithIdentifier:@"createStepTwoSeg" sender:self];
+//            [[self tabBarController] segueForUnwindingToViewController:editStepTwoViewController fromViewController:self identifier:@"createStepTwoSeg"];
+            
+            
+            [[[[self tabBarController] viewControllers] objectAtIndex:1] setCurrentFriend:_currentFriend];
+            [[self tabBarController] setSelectedIndex:1];
         }
     }
     

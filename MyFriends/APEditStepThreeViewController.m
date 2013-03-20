@@ -36,7 +36,7 @@
     _bestMemoryTextView.delegate = self;
     _whenIgrowUpTextView.delegate = self;
     _aWishTextView.delegate = self;
-    
+    NSLog(@"MY FRIEND last name i 3: %@", _currentFriend.lastName);
     if (_editMode) {
     _bestMemoryTextView.text = _currentFriend.bestMemory;
     _whenIgrowUpTextView.text = _currentFriend.whenIgrowUp;
@@ -58,25 +58,29 @@
     _currentFriend.bestMemory = _bestMemoryTextView.text;
     _currentFriend.whenIgrowUp = _whenIgrowUpTextView.text;
     _currentFriend.ifIgotOneWish = _aWishTextView.text;
+NSLog(@"MY FRIEND last name i 3 IGEN: %@", _currentFriend.lastName);
+    NSLog(@"MY FRIEND whenIgrowUp 3: %@", _currentFriend.whenIgrowUp);
     
-    [[APFriendStorage sharedStorage] createFriendWithName:_currentFriend.firstName
-                                                 lastname:_currentFriend.lastName
-                                                 birthDay:_currentFriend.birthDay
-                                                  address:_currentFriend.address
-                                                    email:_currentFriend.email
-                                                   school:_currentFriend.school
-                                                    hobby:_currentFriend.hobby
-                                            favoriteColor:_currentFriend.favoriteColor
-                                            favoriteMovie:_currentFriend.favoriteMovie
-                                            favoriteMusic:_currentFriend.favoriteMusic
-                                           favoriteTvShow:_currentFriend.favoriteTVShow
-                                                    image:nil
-                                                 imageKey:_currentFriend.imageKey
-                                          favoriteWebsite:_currentFriend.favoriteWebsite
-                                               bestMemory:_currentFriend.bestMemory
-                                              whenIgrowUp:_currentFriend.whenIgrowUp
-                                            ifIgotOneWish:_currentFriend.ifIgotOneWish
-                                              phonenumber:_currentFriend.phoneNumber];
+     [[self navigationController]popViewControllerAnimated:YES];
+    //TODO: create the new friend HERE
+//    [[APFriendStorage sharedStorage] createFriendWithName:_currentFriend.firstName
+//                                                 lastname:_currentFriend.lastName
+//                                                 birthDay:_currentFriend.birthDay
+//                                                  address:_currentFriend.address
+//                                                    email:_currentFriend.email
+//                                                   school:_currentFriend.school
+//                                                    hobby:_currentFriend.hobby
+//                                            favoriteColor:_currentFriend.favoriteColor
+//                                            favoriteMovie:_currentFriend.favoriteMovie
+//                                            favoriteMusic:_currentFriend.favoriteMusic
+//                                           favoriteTvShow:_currentFriend.favoriteTVShow
+//                                                    image:nil
+//                                                 imageKey:_currentFriend.imageKey
+//                                          favoriteWebsite:_currentFriend.favoriteWebsite
+//                                               bestMemory:_currentFriend.bestMemory
+//                                              whenIgrowUp:_currentFriend.whenIgrowUp
+//                                            ifIgotOneWish:_currentFriend.ifIgotOneWish
+//                                              phonenumber:_currentFriend.phoneNumber];
     
     
      

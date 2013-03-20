@@ -323,7 +323,7 @@
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="lE0-RY-PNb">
-                                        <rect key="frame" x="0.0" y="363" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="363" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -636,7 +636,7 @@
                                                         <constraint firstAttribute="height" constant="40" id="XVw-at-MzL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="next->" backgroundImage="Default-568h@2x.png">
+                                                    <state key="normal" backgroundImage="Default-568h@2x.png">
                                                         <color key="titleColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -647,16 +647,25 @@
                                                         <action selector="nextStep:" destination="qDt-tc-bCG" eventType="touchUpInside" id="mGS-95-23c"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Next" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfR-lz-Lli">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="HaS-I5-NMp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ZfR-lz-Lli" secondAttribute="trailing" constant="30" id="1OW-Gm-kjB"/>
                                             <constraint firstItem="oCb-Mc-t7l" firstAttribute="centerY" secondItem="VPr-ju-0kM" secondAttribute="centerY" type="default" id="GJq-3j-maY"/>
                                             <constraint firstItem="LfK-Ye-fSy" firstAttribute="leading" secondItem="VMc-MG-ss0" secondAttribute="leading" constant="30" id="Udv-vI-QdP"/>
+                                            <constraint firstItem="ZfR-lz-Lli" firstAttribute="top" secondItem="VMc-MG-ss0" secondAttribute="top" constant="11" id="Vbn-ix-SoO"/>
                                             <constraint firstItem="VPr-ju-0kM" firstAttribute="top" secondItem="LfK-Ye-fSy" secondAttribute="top" type="default" id="aql-vg-MWM"/>
                                             <constraint firstItem="VPr-ju-0kM" firstAttribute="leading" secondItem="VMc-MG-ss0" secondAttribute="leading" constant="20" type="default" id="baL-TT-nx2"/>
-                                            <constraint firstItem="oCb-Mc-t7l" firstAttribute="baseline" secondItem="VPr-ju-0kM" secondAttribute="baseline" type="default" id="foG-9E-LJf"/>
                                             <constraint firstItem="oCb-Mc-t7l" firstAttribute="leading" secondItem="VMc-MG-ss0" secondAttribute="leading" constant="225" id="iEh-86-TVH"/>
                                             <constraint firstItem="oCb-Mc-t7l" firstAttribute="centerY" secondItem="VMc-MG-ss0" secondAttribute="centerY" type="default" id="jpO-hk-Cak"/>
                                         </constraints>
@@ -678,6 +687,8 @@
                         <outlet property="firstName" destination="tLU-vU-s9z" id="JL5-dI-NsR"/>
                         <outlet property="image" destination="bqf-76-eiU" id="hrv-sr-WIp"/>
                         <outlet property="lastName" destination="Lke-i5-1OZ" id="dcW-Mm-0sy"/>
+                        <outlet property="nextBtnLable" destination="ZfR-lz-Lli" id="exY-8m-jro"/>
+                        <outlet property="nextBtnOutlet" destination="oCb-Mc-t7l" id="SRT-qV-Dyr"/>
                         <outlet property="phoneNumber" destination="VPr-ju-0kM" id="5SQ-MY-VXX"/>
                         <outlet property="school" destination="am4-zn-qRs" id="dlp-O3-jsd"/>
                         <segue destination="fka-vK-U96" kind="push" identifier="createStepTwoSeg" id="AwI-jv-RTL"/>
@@ -842,7 +853,7 @@
                                                         <constraint firstAttribute="width" constant="90" id="Ngd-jE-C8z"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="next->" backgroundImage="Default-568h@2x.png">
+                                                    <state key="normal" backgroundImage="Default-568h@2x.png">
                                                         <color key="titleColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -855,12 +866,22 @@
                                                         <action selector="saveFriend:" destination="qDt-tc-bCG" eventType="touchUpInside" id="Jox-Pf-phq"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Next" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8U-uz-Nhm">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="QV0-ad-FPn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.93478260869999996" green="0.28810112049999997" blue="0.310146584" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="U6x-6U-7ZU" secondAttribute="bottom" constant="2" id="KkN-dV-v0e"/>
+                                            <constraint firstItem="W8U-uz-Nhm" firstAttribute="top" secondItem="KD1-6a-Uuy" secondAttribute="top" constant="19" id="NTW-rV-xC4"/>
+                                            <constraint firstAttribute="trailing" secondItem="W8U-uz-Nhm" secondAttribute="trailing" constant="39" id="ZBJ-JX-aai"/>
                                             <constraint firstAttribute="trailing" secondItem="U6x-6U-7ZU" secondAttribute="trailing" constant="10" id="ZTb-66-yrL"/>
                                         </constraints>
                                     </tableViewCell>
@@ -881,6 +902,8 @@
                         <outlet property="favTvLabel" destination="xEa-WY-YAE" id="RKo-u4-km4"/>
                         <outlet property="favWebLabel" destination="HsH-vg-4BA" id="83v-PV-1vS"/>
                         <outlet property="hobbyLabel" destination="J1x-jR-c4Z" id="pj6-ch-AG5"/>
+                        <outlet property="nextBtnLabel" destination="W8U-uz-Nhm" id="oLJ-9y-iBb"/>
+                        <outlet property="nextBtnOutlet" destination="U6x-6U-7ZU" id="Wxo-uW-UoN"/>
                         <segue destination="7kO-UR-fg1" kind="push" identifier="createStepThreeSeg" id="wCB-s2-YPZ"/>
                     </connections>
                 </tableViewController>
