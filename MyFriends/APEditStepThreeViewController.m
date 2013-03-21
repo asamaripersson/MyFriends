@@ -106,4 +106,16 @@
     }
     return YES;
 }
+-(void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if (textView == _aWishTextView)  [self.tableView setFrame:CGRectMake(0,-20,320,490)];
+    if (textView == _whenIgrowUpTextView)  [self.tableView setFrame:CGRectMake(0,-160,320,490)];
+    
+}
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self.tableView setFrame:CGRectMake(0,0,320,490)];
+    [[self tableView] reloadData];
+}
+
 @end

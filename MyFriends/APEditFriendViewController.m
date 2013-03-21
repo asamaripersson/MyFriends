@@ -37,9 +37,10 @@
                                                 target:self
                                                 action:@selector(removeFriend)];
                 
-                [[esTwoVc navigationItem]setRightBarButtonItem:rightBarBtn];
+            [[esTwoVc navigationItem]setRightBarButtonItem:rightBarBtn];
             [esTwoVc setEditMode:YES];
             [esTwoVc setTitle:@"Edit favorites"];
+            
             
         }
        }

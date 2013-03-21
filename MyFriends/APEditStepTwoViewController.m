@@ -56,8 +56,6 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 }
 - (void)viewDidLoad
 {
@@ -106,18 +104,20 @@
     return YES;
 }
 
-
-- (void)keyboardDidShow:(NSNotification *)notification
+-(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    NSLog(@"keyboardDidShow");
-    [self.tableView scrollsToTop];
-    
+    if (textField == _favMovieLabel)  [self.tableView setFrame:CGRectMake(0,-30,320,490)];
+    if (textField == _favTvLabel)  [self.tableView setFrame:CGRectMake(0,-80,320,490)];
+   if (textField == _favWebLabel)  [self.tableView setFrame:CGRectMake(0,-120,320,490)];
+   
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+ [self.tableView setFrame:CGRectMake(0,0,320,490)];
+    [[self tableView] reloadData];
 }
 
--(void)keyboardDidHide:(NSNotification *)notification
-{
-    [self.tableView setFrame:CGRectMake(0,0,320,460)];
-}
+
 
 
 @end
