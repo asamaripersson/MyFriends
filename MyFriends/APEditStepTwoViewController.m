@@ -25,7 +25,9 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+
     }
     return self;
 }
@@ -47,7 +49,8 @@
             
             [[esThreeVc navigationItem]setRightBarButtonItem:rightBarBtn];
             [esThreeVc setEditMode:YES];
-            [esThreeVc setTitle:[NSString stringWithFormat:@"Edit%@", _currentFriend.firstName]];
+            [esThreeVc setTitle:@"Edit some more"];
+          
        }
     }
 }
@@ -84,13 +87,6 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark UITextFieldDelegate
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
 
 - (IBAction)next:(id)sender {
 
@@ -102,4 +98,26 @@
     newFriend.favoriteWebsite = _favWebLabel.text;
 
 }
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    //Assign new frame to your view
+    [self.view setFrame:CGRectMake(0,-20,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+    
+}
+
+-(void)keyboardDidHide:(NSNotification *)notification
+{
+    [self.view setFrame:CGRectMake(0,0,320,460)];
+}
+
+
 @end

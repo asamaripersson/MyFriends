@@ -14,7 +14,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:999.0/006.0 green:000.0/111.0 blue:000.0/222.0 alpha:1.0]];
     
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                          [UIFont fontWithName:@"Helvetica Neue" size:20.0f], UITextAttributeFont,
+                                                          [UIFont fontWithName:@"Helvetica Neue" size:15.0f], UITextAttributeFont,
                                                           [UIColor whiteColor], UITextAttributeTextColor,
                                                           [UIColor grayColor], UITextAttributeTextShadowColor,
                                                           [NSValue valueWithUIOffset:UIOffsetMake(0.0f, 1.0f)], UITextAttributeTextShadowOffset,

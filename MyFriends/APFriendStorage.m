@@ -64,7 +64,6 @@
     f.image = nil;
     f.imageKey = imageKey;
     f.phoneNumber = number;
-   // NSLog(@"key %@",imageKey);
     return f;
 }
 

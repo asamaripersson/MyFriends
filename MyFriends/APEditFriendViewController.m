@@ -39,7 +39,7 @@
                 
                 [[esTwoVc navigationItem]setRightBarButtonItem:rightBarBtn];
             [esTwoVc setEditMode:YES];
-            [esTwoVc setTitle:[NSString stringWithFormat:@"Edit %@", _currentFriend.firstName]];
+            [esTwoVc setTitle:@"Edit favorites"];
             
         }
        }
@@ -50,6 +50,8 @@
 {
     [super viewWillAppear:animated];
     {
+
+        
     _firstName.delegate = self;
     _lastName.delegate = self;
     _birtday.delegate = self;
@@ -85,11 +87,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
+
 
 - (IBAction)nextStep:(id)sender {
     
@@ -100,6 +98,7 @@
         _currentFriend.address = _address.text;
         _currentFriend.school = _school.text;
         _currentFriend.email = _email.text;
+        _currentFriend.phoneNumber = [NSNumber numberWithInt:[_phoneNumber.text intValue]];
     
         if (thereIsANewImage)
         {
@@ -204,5 +203,10 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         [_image setImage:aNewImage];
     }];
 
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 @end
