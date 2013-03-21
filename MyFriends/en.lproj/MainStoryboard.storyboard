@@ -1004,8 +1004,8 @@
                                         <constraints>
                                             <constraint firstItem="U6x-6U-7ZU" firstAttribute="leading" secondItem="W8U-uz-Nhm" secondAttribute="leading" type="default" id="6cg-O6-3uw"/>
                                             <constraint firstItem="U6x-6U-7ZU" firstAttribute="centerY" secondItem="KD1-6a-Uuy" secondAttribute="centerY" type="default" id="EDo-hS-jWD"/>
-                                            <constraint firstItem="W8U-uz-Nhm" firstAttribute="top" secondItem="KD1-6a-Uuy" secondAttribute="top" constant="19" id="NTW-rV-xC4"/>
                                             <constraint firstItem="W8U-uz-Nhm" firstAttribute="centerX" secondItem="KD1-6a-Uuy" secondAttribute="centerX" type="default" id="QHo-2F-eVe"/>
+                                            <constraint firstItem="W8U-uz-Nhm" firstAttribute="top" secondItem="KD1-6a-Uuy" secondAttribute="top" constant="20" type="default" id="dgh-Nz-BLh"/>
                                             <constraint firstItem="W8U-uz-Nhm" firstAttribute="trailing" secondItem="U6x-6U-7ZU" secondAttribute="trailing" type="default" id="jtl-QF-WT9"/>
                                         </constraints>
                                     </tableViewCell>
@@ -1947,6 +1947,109 @@
         <image name="aFrame.png" width="160" height="100"/>
         <image name="camera.png" width="200" height="200"/>
     </resources>
+    <classes>
+        <class className="APDetailInfoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APDetailInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="address" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="birthday" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="email" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="firstName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lastName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="phoneNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="school" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="APDetailStepThreeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APDetailStepThreeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bestMemoryTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="ifIGotaWishTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="whenIGrowUpTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="APDetailStepTwoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APDetailStepTwoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="favColorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favMovieLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favMusicLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favTvLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="favWebLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hobbyLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="APEditFriendViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditFriendViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nextStep:"/>
+                <relationship kind="action" name="takePic:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="birtday" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lastName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nextBtnLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextBtnOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="phoneNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="school" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="APEditMeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditMeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveMe:"/>
+                <relationship kind="outlet" name="address" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="birthday" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="school" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="APEditStepThreeViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditStepThreeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveFriend:"/>
+                <relationship kind="outlet" name="aWishTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="bestMemoryTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="whenIgrowUpTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="APEditStepTwoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APEditStepTwoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="next:"/>
+                <relationship kind="outlet" name="favColorLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="favMovieLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="favMusicLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="favTvLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="favWebLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="hobbyLabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nextBtnLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextBtnOutlet" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="APFriendListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APFriendListCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="firstNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lastNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="APMyFriendsListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APMyFriendsListViewController.h"/>
+        </class>
+        <class className="APViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

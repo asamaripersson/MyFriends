@@ -25,8 +25,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+
 
     }
     return self;
@@ -57,7 +56,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-      // [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP TWO"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 }
 - (void)viewDidLoad
 {
@@ -109,14 +109,14 @@
 
 - (void)keyboardDidShow:(NSNotification *)notification
 {
-    //Assign new frame to your view
-    [self.view setFrame:CGRectMake(0,-20,320,460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+    NSLog(@"keyboardDidShow");
+    [self.tableView scrollsToTop];
     
 }
 
 -(void)keyboardDidHide:(NSNotification *)notification
 {
-    [self.view setFrame:CGRectMake(0,0,320,460)];
+    [self.tableView setFrame:CGRectMake(0,0,320,460)];
 }
 
 

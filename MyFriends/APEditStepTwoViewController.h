@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Friend;
-@interface APEditStepTwoViewController : UITableViewController <UITextFieldDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate>
+@interface APEditStepTwoViewController : UITableViewController <UITextFieldDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) Friend *currentFriend;
 
