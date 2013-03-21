@@ -28,7 +28,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     //        [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s thoghts",_currentFriend.firstName]];
-    [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP THREE"];
+  //  [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP THREE"];
 }
 - (void)viewDidLoad
 {
@@ -58,10 +58,10 @@
     _currentFriend.bestMemory = _bestMemoryTextView.text;
     _currentFriend.whenIgrowUp = _whenIgrowUpTextView.text;
     _currentFriend.ifIgotOneWish = _aWishTextView.text;
-NSLog(@"MY FRIEND last name i 3 IGEN: %@", _currentFriend.lastName);
-    NSLog(@"MY FRIEND whenIgrowUp 3: %@", _currentFriend.whenIgrowUp);
+
     
-     [[self navigationController]popViewControllerAnimated:YES];
+    [self.navigationController popToViewController: [self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+
     //TODO: create the new friend HERE
 //    [[APFriendStorage sharedStorage] createFriendWithName:_currentFriend.firstName
 //                                                 lastname:_currentFriend.lastName

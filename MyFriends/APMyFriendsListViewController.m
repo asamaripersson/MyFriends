@@ -52,13 +52,19 @@
         [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
     }
 
+    
+    //TODO: Not neccessery??
     if ([segue.identifier isEqualToString:@"addFriendSegue"]) {
        // UITabBarController *tbc = [segue destinationViewController];
 
-        __unused APEditFriendViewController *efVc = [segue destinationViewController];
-        UIBarButtonItem *anewBackButton = [[UIBarButtonItem alloc] initWithTitle: @"CANCEL" style: UIBarButtonItemStyleBordered target: nil action: nil];
-        
-        [[tbc navigationItem] setLeftBarButtonItem: anewBackButton];
+         APEditFriendViewController *efVc = [segue destinationViewController];
+        [efVc setTitle:@"New friend"];
+//               UIBarButtonItem *removeItem = [[UIBarButtonItem alloc]
+//                                            initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+//                                              target:efVc
+//                                              action:@selector(removeFriend:)];
+//               [[efVc navigationItem] setRightBarButtonItem:removeItem];
+
         
       
         
@@ -74,7 +80,7 @@
 {
     [self.tableView reloadData];
     [[[self navigationController] navigationBar] setHidden:NO];
-    [self setTitle:@"Mina vänner"];
+    [self setTitle:@"My Friends"];
 }
 - (void)viewDidLoad
 {
@@ -126,56 +132,6 @@
 
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

@@ -28,26 +28,20 @@
 //        [[segue destinationViewController] setCurrentFriend:_currentFriend];
 //       [[segue destinationViewController]setEditMode:YES];
 //    }
-    if ([segue.identifier isEqualToString:@"EditFriendSeg"]) {
-        UITabBarController *tbc = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"EditFriendSegue"]) {
         
-        APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
-        APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
-        APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
-       
+        APEditFriendViewController *efVc = [segue destinationViewController];
+
         [efVc setCurrentFriend:_currentFriend];
-        [efTwovc setCurrentFriend:_currentFriend];
-        [efThreevc setCurrentFriend:_currentFriend];
+        [efVc setTitle:[NSString stringWithFormat:@"Edit %@", _currentFriend.firstName]];
         [efVc setEditMode:YES];
-        [efTwovc setEditMode:YES];
-        [efThreevc setEditMode:YES];
-        
+
         UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
                                         initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
-                                        target:[[tbc viewControllers]objectAtIndex:0]
+                                        target:efVc
                                         action:@selector(removeFriend)];
         
-        [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
+        [[efVc navigationItem]setRightBarButtonItem:rightBarBtn];
     }
 }
 
@@ -61,7 +55,7 @@
     _address.text = _currentFriend.address;
     _school.text = _currentFriend.school;
     _email.text = _currentFriend.email;
-    _phoneNumber.text =@"nummer";
+    _phoneNumber.text = [_currentFriend.phoneNumber stringValue];
         
     NSString *imageKey = [_currentFriend imageKey];
     if (imageKey) {
@@ -76,7 +70,7 @@
 - (void)editFriend
 {
     NSLog(@"preform segue edit friend??");
-    [self performSegueWithIdentifier: @"EditFriendSeg" sender: self];
+    [self performSegueWithIdentifier: @"EditFriendSegue" sender: self];
     
 }
 

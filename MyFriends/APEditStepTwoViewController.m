@@ -10,6 +10,7 @@
 #import "Friend.h"
 #import "APEditStepThreeViewController.h"
 #import "APFriendStorage.h"
+#import "APEditFriendViewController.h"
 
 @interface APEditStepTwoViewController ()
 
@@ -18,6 +19,7 @@
 @implementation APEditStepTwoViewController
 {
     Friend *newFriend;
+    APEditFriendViewController *edidFriendVc;
 }
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,21 +34,27 @@
 {
     
     if ([segue.identifier isEqualToString:@"createStepThreeSeg"]) {
-        //        UITabBarController *tbc = [segue destinationViewController];
-        //
-        //        APDetailInfoViewController *divc = [[tbc viewControllers] objectAtIndex:0];
-        //        APDetailStepTwoViewController *dsTwovc = [[tbc viewControllers] objectAtIndex:1];
-        //        APDetailStepThreeViewController *dsThreevc = [[tbc viewControllers] objectAtIndex:2];
-        //        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        
+
         APEditStepThreeViewController *esThreeVc = [segue destinationViewController];
         [esThreeVc setCurrentFriend:_currentFriend];
+        if (_editMode){
+            
+            UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
+                                            initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                            target:[self.navigationController.viewControllers objectAtIndex:3]
+                                            action:@selector(removeFriend)];
+            
+            
+            [[esThreeVc navigationItem]setRightBarButtonItem:rightBarBtn];
+            [esThreeVc setEditMode:YES];
+            [esThreeVc setTitle:[NSString stringWithFormat:@"Edit%@", _currentFriend.firstName]];
+       }
     }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-       [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP TWO"];
+      // [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP TWO"];
 }
 - (void)viewDidLoad
 {
@@ -67,23 +75,13 @@
     _favMusicLabel.text = _currentFriend.favoriteMusic;
     _favTvLabel.text = _currentFriend.favoriteTVShow;
     _favWebLabel.text = _currentFriend.favoriteWebsite;
-         _nextBtnLabel.text = @"Save";
     }
-
-if (_editMode) {
-    //set text on labels
-}
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
 {
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark UITextFieldDelegate
@@ -95,21 +93,13 @@ if (_editMode) {
 }
 
 - (IBAction)next:(id)sender {
-    //    if (_editMode) {
-    NSLog(@"MY FRIEND MUSIC: %@", _currentFriend.favoriteMusic);
-    NSLog(@"MY FRIEND first name: %@", _currentFriend.firstName);
+
     newFriend.hobby = _hobbyLabel.text;
     newFriend.favoriteColor = _favColorLabel.text;
     newFriend.favoriteMusic = _favMusicLabel.text;
     newFriend.favoriteMovie = _favMovieLabel.text;
     newFriend.favoriteTVShow = _favTvLabel.text;
     newFriend.favoriteWebsite = _favWebLabel.text;
-    NSLog(@"MY FRIEND MUSIC: %@", newFriend.favoriteMusic);
-       NSLog(@"MY FRIEND first name: %@", newFriend.firstName);
-    
-//      [[self navigationController] performSegueWithIdentifier:@"createStepThreeSeg" sender:self];
-    [[[[self tabBarController] viewControllers] objectAtIndex:2] setCurrentFriend:newFriend];
-     [[self tabBarController] setSelectedIndex:2];
-    //    }
+
 }
 @end
