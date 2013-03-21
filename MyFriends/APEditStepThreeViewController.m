@@ -25,18 +25,13 @@
     }
     return self;
 }
--(void)viewWillAppear:(BOOL)animated
-{
-    //        [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s thoghts",_currentFriend.firstName]];
-  //  [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP THREE"];
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     _bestMemoryTextView.delegate = self;
     _whenIgrowUpTextView.delegate = self;
     _aWishTextView.delegate = self;
-    NSLog(@"MY FRIEND last name i 3: %@", _currentFriend.lastName);
     if (_editMode) {
     _bestMemoryTextView.text = _currentFriend.bestMemory;
     _whenIgrowUpTextView.text = _currentFriend.whenIgrowUp;

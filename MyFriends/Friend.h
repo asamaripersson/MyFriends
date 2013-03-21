@@ -2,7 +2,7 @@
 //  Friend.h
 //  MyFriends
 //
-//  Created by Åsa Persson on 2013-02-10.
+//  Created by Åsa Persson on 2013-03-21.
 //
 //
 
@@ -24,11 +24,12 @@
 @property (nonatomic, retain) NSString * firstName;
 @property (nonatomic, retain) NSString * hobby;
 @property (nonatomic, retain) NSString * ifIgotOneWish;
-@property (nonatomic, retain) UIImage * image;
+@property (nonatomic, retain) UIImage *image;
+@property (nonatomic, retain) NSString * imageKey;
 @property (nonatomic, retain) NSString * lastName;
-@property (nonatomic, retain) NSNumber * phoneNumber;
+@property (nonatomic, retain) NSString * phoneNumber;
 @property (nonatomic, retain) NSString * school;
 @property (nonatomic, retain) NSString * whenIgrowUp;
-@property (nonatomic, retain) NSString * imageKey;
 
 @end
+

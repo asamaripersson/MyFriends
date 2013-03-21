@@ -66,7 +66,6 @@
     _favMusicLabel.delegate = self;
     _favTvLabel.delegate = self;
     _favWebLabel.delegate = self;
-    NSLog(@"MY FRIEND first name: %@ and b-day:  %@", _currentFriend.firstName, _currentFriend.birthDay);
     newFriend = _currentFriend;
     _nextBtnLabel.text = @"Next";
     if (_editMode) {
@@ -106,11 +105,12 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if (textField == _favMovieLabel)  [self.tableView setFrame:CGRectMake(0,-30,320,490)];
-    if (textField == _favTvLabel)  [self.tableView setFrame:CGRectMake(0,-80,320,490)];
-   if (textField == _favWebLabel)  [self.tableView setFrame:CGRectMake(0,-120,320,490)];
+    if (textField == _favMovieLabel)  [self.tableView setFrame:CGRectMake(0,-55,320,490)];
+    if (textField == _favTvLabel)  [self.tableView setFrame:CGRectMake(0,-105,320,490)];
+   if (textField == _favWebLabel)  [self.tableView setFrame:CGRectMake(0,-155,320,490)];
    
 }
+
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
  [self.tableView setFrame:CGRectMake(0,0,320,490)];

@@ -52,14 +52,15 @@
     _address.text = _currentFriend.address;
     _school.text = _currentFriend.school;
     _email.text = _currentFriend.email;
-    _phoneNumber.text = [_currentFriend.phoneNumber stringValue];
+    _phoneNumber.text = _currentFriend.phoneNumber;
+
         
     NSString *imageKey = [_currentFriend imageKey];
     if (imageKey) {
         UIImage *imageToDisplay = [[APImageStorage defaultImageStore] imageForKey:imageKey];
         [_image setImage:imageToDisplay];
     } else {
-        [_image setImage:nil]; NSLog(@"there NO an imagekey"); 
+        [_image setImage:nil]; 
     }
     
 }

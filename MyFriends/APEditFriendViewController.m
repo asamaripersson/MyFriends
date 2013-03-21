@@ -71,7 +71,7 @@
         _address.text = _currentFriend.address;
         _school.text = _currentFriend.school;
         _email.text = _currentFriend.email;
-        _phoneNumber.text = [_currentFriend.phoneNumber stringValue];
+        _phoneNumber.text = _currentFriend.phoneNumber;
         _image.image = [[APImageStorage defaultImageStore] imageForKey:_currentFriend.imageKey];
 
     }
@@ -99,8 +99,8 @@
         _currentFriend.address = _address.text;
         _currentFriend.school = _school.text;
         _currentFriend.email = _email.text;
-        _currentFriend.phoneNumber = [NSNumber numberWithInt:[_phoneNumber.text intValue]];
-    
+        _currentFriend.phoneNumber = _phoneNumber.text;
+
         if (thereIsANewImage)
         {
                 NSString *oldKey = [_currentFriend imageKey];
@@ -112,12 +112,18 @@
                 [[APImageStorage defaultImageStore] setImage:aNewImage
                                                       forKey:aNewImageKey];
         }
+            [self performSegueWithIdentifier:@"stepTwoSegue" sender:self];
+        
     } else {
+        
         if (_firstName.text.length < 1) {
-            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"inget namn" message:@"Du måste ange din väns förnamn för att lägga till den som vän." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"No name" message:@"Your friend must have a name??" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
         } else {
         
+
+            
+            //TODP: create friend in step three?
    _currentFriend = [[APFriendStorage sharedStorage] createFriendWithName:_firstName.text
                                                                      lastname:_lastName.text
                                                                      birthDay:_birtday.text
@@ -135,26 +141,37 @@
                                                                    bestMemory:@""
                                                                   whenIgrowUp:@""
                                                                 ifIgotOneWish:@""
-                                                                  phonenumber:[NSNumber numberWithInt:[_phoneNumber.text intValue]]];
+                                                                  phonenumber:_phoneNumber.text];
+
             
             if (thereIsANewImage) {
                 [_currentFriend setImageKey:aNewImageKey];
                 
-                //TODO: set image in step three
+                //TODO: set image in step three? 
                 [[APImageStorage defaultImageStore] setImage:aNewImage
                                                       forKey:aNewImageKey];
             }
-
+            [self performSegueWithIdentifier:@"stepTwoSegue" sender:self];
         }
     }
 }
 
 - (void)removeFriend
 {
-    [[APFriendStorage sharedStorage] removeFriend:_currentFriend];
-    [self.navigationController popToViewController: [self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Removing a friend, REALLY??" message:@"Are you sure you wanna remove your dear friend?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"NOOOOO", nil];
+    [alert setTag:1];
+    [alert show];
+    
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([alertView tag] == 1 && buttonIndex == 0)
+    {
+        [[APFriendStorage sharedStorage] removeFriend:_currentFriend];
+        [self.navigationController popToViewController: [self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    }
+}
 - (IBAction)takePic:(id)sender
 {
     if([imagePickerPopover isPopoverVisible]) {
@@ -209,5 +226,10 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [textField resignFirstResponder];
     return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self.tableView setFrame:CGRectMake(0,0,340,570)];
+    [[self tableView] reloadData];
 }
 @end

@@ -53,25 +53,11 @@
     }
 
     
-    //TODO: Not neccessery??
     if ([segue.identifier isEqualToString:@"addFriendSegue"]) {
-       // UITabBarController *tbc = [segue destinationViewController];
 
          APEditFriendViewController *efVc = [segue destinationViewController];
         [efVc setTitle:@"New friend"];
-//               UIBarButtonItem *removeItem = [[UIBarButtonItem alloc]
-//                                            initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
-//                                              target:efVc
-//                                              action:@selector(removeFriend:)];
-//               [[efVc navigationItem] setRightBarButtonItem:removeItem];
-
-        
-      
-        
-//       __unused APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
-//       __unused APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
-//        __unused APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
-        
+     
     }
 }
 
@@ -82,13 +68,7 @@
     [[[self navigationController] navigationBar] setHidden:NO];
     [self setTitle:@"My Friends"];
 }
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -121,10 +101,10 @@
     NSString *imageKey = [f imageKey];
     if (imageKey) {
         UIImage *imageToDisplay = [[APImageStorage defaultImageStore] imageForKey:imageKey];
-        NSLog(@"there is an imagekey");
+   
         [cell.image setImage:imageToDisplay];
     } else {
-        [cell.image setImage:nil]; NSLog(@"there NO an imagekey");
+        [cell.image setImage:nil]; 
     }
     
     
