@@ -25,6 +25,7 @@
 @implementation APMyFriendsListViewController
 {
     Friend *currentFriend;
+    UITabBarController *tbc;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -32,7 +33,7 @@
     
 
     if ([segue.identifier isEqualToString:@"detailInfoSegue"]) {
-         UITabBarController *tbc = [segue destinationViewController];
+         tbc = [segue destinationViewController];
         
         APDetailInfoViewController *divc = [[tbc viewControllers] objectAtIndex:0];
         APDetailStepTwoViewController *dsTwovc = [[tbc viewControllers] objectAtIndex:1];
@@ -51,15 +52,12 @@
         [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
     }
 
+    
     if ([segue.identifier isEqualToString:@"addFriendSegue"]) {
-        UITabBarController *tbc = [segue destinationViewController];
-        
-        
-        //TODO: set tabbar vc different to avoid warnings (or __unused??)
-       __unused APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
-       __unused APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
-        __unused APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
-        
+
+         APEditFriendViewController *efVc = [segue destinationViewController];
+        [efVc setTitle:@"New friend"];
+     
     }
 }
 
@@ -68,15 +66,9 @@
 {
     [self.tableView reloadData];
     [[[self navigationController] navigationBar] setHidden:NO];
-    [self setTitle:@"Mina vänner"];
+    [self setTitle:@"My Friends"];
 }
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -109,10 +101,10 @@
     NSString *imageKey = [f imageKey];
     if (imageKey) {
         UIImage *imageToDisplay = [[APImageStorage defaultImageStore] imageForKey:imageKey];
-        NSLog(@"there is an imagekey");
+   
         [cell.image setImage:imageToDisplay];
     } else {
-        [cell.image setImage:nil]; NSLog(@"there NO an imagekey");
+        [cell.image setImage:nil]; 
     }
     
     
@@ -120,56 +112,6 @@
 
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

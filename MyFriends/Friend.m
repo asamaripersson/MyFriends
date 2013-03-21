@@ -2,7 +2,7 @@
 //  Friend.m
 //  MyFriends
 //
-//  Created by Åsa Persson on 2013-02-10.
+//  Created by Åsa Persson on 2013-03-21.
 //
 //
 
@@ -24,10 +24,10 @@
 @dynamic hobby;
 @dynamic ifIgotOneWish;
 @dynamic image;
+@dynamic imageKey;
 @dynamic lastName;
 @dynamic phoneNumber;
 @dynamic school;
 @dynamic whenIgrowUp;
-@dynamic imageKey;
 
 @end

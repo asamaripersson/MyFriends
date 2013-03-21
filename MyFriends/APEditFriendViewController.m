@@ -11,6 +11,8 @@
 #import "Friend.h"
 #import "APFriendStorage.h"
 #import "APImageStorage.h"
+#import "APEditStepTwoViewController.h"
+
 @interface APEditFriendViewController ()
 
 @end
@@ -21,22 +23,47 @@
     UIImage *aNewImage;
     BOOL thereIsANewImage;
 }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"stepTwoSegue"]) {
+        
+        APEditStepTwoViewController *esTwoVc = [segue destinationViewController];
+        [esTwoVc setCurrentFriend:_currentFriend];
+        if (_editMode){
+                
+                UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
+                                                initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                                target:self
+                                                action:@selector(removeFriend)];
+                
+            [[esTwoVc navigationItem]setRightBarButtonItem:rightBarBtn];
+            [esTwoVc setEditMode:YES];
+            [esTwoVc setTitle:@"Edit favorites"];
+            
+            
+        }
+       }
+}
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     {
-        //        [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s thoghts",_currentFriend.firstName]];
-        [[[self tabBarController]navigationItem] setTitle:@"EDIT STEP ONEEE"];
+
+        
     _firstName.delegate = self;
     _lastName.delegate = self;
     _birtday.delegate = self;
     _address.delegate = self;
     _school.delegate = self;
     _email.delegate = self;
-    
+    _phoneNumber.delegate = self;
+        
     thereIsANewImage = NO;
-    
+
+        
     if (_editMode) {
         _firstName.text = _currentFriend.firstName;
         _lastName.text = _currentFriend.lastName;
@@ -44,14 +71,9 @@
         _address.text = _currentFriend.address;
         _school.text = _currentFriend.school;
         _email.text = _currentFriend.email;
+        _phoneNumber.text = _currentFriend.phoneNumber;
         _image.image = [[APImageStorage defaultImageStore] imageForKey:_currentFriend.imageKey];
 
-        
-        UIBarButtonItem *removeItem = [[UIBarButtonItem alloc]
-                                       initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
-                                       target:self
-                                       action:@selector(removeFriend:)];
-        [[self navigationItem] setRightBarButtonItem:removeItem];
     }
 }
 }
@@ -66,12 +88,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
-- (IBAction)saveFriend:(id)sender {
+
+
+- (IBAction)nextStep:(id)sender {
     
     if (_editMode) {
          _currentFriend.firstName = _firstName.text;
@@ -80,10 +99,10 @@
         _currentFriend.address = _address.text;
         _currentFriend.school = _school.text;
         _currentFriend.email = _email.text;
-    
+        _currentFriend.phoneNumber = _phoneNumber.text;
+
         if (thereIsANewImage)
         {
-             NSLog(@"finns NY BILD");
                 NSString *oldKey = [_currentFriend imageKey];
                 if (oldKey) {
                     NSString *oldKey = [_currentFriend imageKey];
@@ -93,12 +112,18 @@
                 [[APImageStorage defaultImageStore] setImage:aNewImage
                                                       forKey:aNewImageKey];
         }
+            [self performSegueWithIdentifier:@"stepTwoSegue" sender:self];
+        
     } else {
+        
         if (_firstName.text.length < 1) {
-            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"inget namn" message:@"Du måste ange din väns förnamn för att lägga till den som vän." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"No name" message:@"Your friend must have a name??" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
         } else {
         
+
+            
+            //TODP: create friend in step three?
    _currentFriend = [[APFriendStorage sharedStorage] createFriendWithName:_firstName.text
                                                                      lastname:_lastName.text
                                                                      birthDay:_birtday.text
@@ -116,29 +141,37 @@
                                                                    bestMemory:@""
                                                                   whenIgrowUp:@""
                                                                 ifIgotOneWish:@""
-                                                                  phonenumber:nil];
-        
-        if (thereIsANewImage) {
-            [_currentFriend setImageKey:aNewImageKey];
+                                                                  phonenumber:_phoneNumber.text];
+
             
-            [[APImageStorage defaultImageStore] setImage:aNewImage
-                                                  forKey:aNewImageKey];
-        }
-             [[self navigationController]popViewControllerAnimated:YES];
+            if (thereIsANewImage) {
+                [_currentFriend setImageKey:aNewImageKey];
+                
+                //TODO: set image in step three? 
+                [[APImageStorage defaultImageStore] setImage:aNewImage
+                                                      forKey:aNewImageKey];
+            }
+            [self performSegueWithIdentifier:@"stepTwoSegue" sender:self];
         }
     }
-    
 }
 
 - (void)removeFriend
 {
-    NSLog(@"REMOVES FIREND");
-[[APFriendStorage sharedStorage] removeFriend:_currentFriend];
-[self.navigationController popToViewController:
- [self.navigationController.viewControllers objectAtIndex:1]
-  animated:YES];
+    UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Removing a friend, REALLY??" message:@"Are you sure you wanna remove your dear friend?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"NOOOOO", nil];
+    [alert setTag:1];
+    [alert show];
+    
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([alertView tag] == 1 && buttonIndex == 0)
+    {
+        [[APFriendStorage sharedStorage] removeFriend:_currentFriend];
+        [self.navigationController popToViewController: [self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    }
+}
 - (IBAction)takePic:(id)sender
 {
     if([imagePickerPopover isPopoverVisible]) {
@@ -188,5 +221,15 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         [_image setImage:aNewImage];
     }];
 
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self.tableView setFrame:CGRectMake(0,0,340,570)];
+    [[self tableView] reloadData];
 }
 @end

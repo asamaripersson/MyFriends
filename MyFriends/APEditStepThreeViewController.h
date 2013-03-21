@@ -7,15 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class Friend;
-@interface APEditStepThreeViewController : UITableViewController
+
+@interface APEditStepThreeViewController : UITableViewController <UITextViewDelegate>
+
 @property (weak, nonatomic) Friend *currentFriend;
+
 @property BOOL editMode;
 @property (weak, nonatomic) IBOutlet UITextView *bestMemoryTextView;
 
 @property (weak, nonatomic) IBOutlet UITextView *aWishTextView;
 
 @property (weak, nonatomic) IBOutlet UITextView *whenIgrowUpTextView;
+- (IBAction)saveFriend:(id)sender;
 
 
 @end

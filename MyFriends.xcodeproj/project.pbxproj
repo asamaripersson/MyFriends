@@ -37,7 +37,9 @@
 		1C5AA60F16C7A356006A972E /* fille.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C5AA60E16C7A356006A972E /* fille.jpg */; };
 		1C5AA61A16C7B291006A972E /* APImageStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5AA61916C7B291006A972E /* APImageStorage.m */; };
 		1C82374816EBE890000459EB /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C82374716EBE890000459EB /* camera.png */; };
-		1C84231E16C7E82A009CB823 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C84231D16C7E82A009CB823 /* Friend.m */; };
+		1C977DB316FB491300E8C315 /* MyFriendsLoggo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C977DB216FB491300E8C315 /* MyFriendsLoggo.png */; };
+		1C977DB516FB491F00E8C315 /* myFriendsPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C977DB416FB491F00E8C315 /* myFriendsPic.png */; };
+		1C977DB816FB57FB00E8C315 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C977DB716FB57FB00E8C315 /* Friend.m */; };
 		1CCF64E0169377E100E1F896 /* APFriendStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF64DF169377E100E1F896 /* APFriendStorage.m */; };
 		1CCF64E416937B0C00E1F896 /* APCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF64E316937B0C00E1F896 /* APCoreDataService.m */; };
 /* End PBXBuildFile section */
@@ -90,8 +92,10 @@
 		1C5AA61816C7B291006A972E /* APImageStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APImageStorage.h; sourceTree = "<group>"; };
 		1C5AA61916C7B291006A972E /* APImageStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APImageStorage.m; sourceTree = "<group>"; };
 		1C82374716EBE890000459EB /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
-		1C84231C16C7E82A009CB823 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = ../Friend.h; sourceTree = "<group>"; };
-		1C84231D16C7E82A009CB823 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = ../Friend.m; sourceTree = "<group>"; };
+		1C977DB216FB491300E8C315 /* MyFriendsLoggo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyFriendsLoggo.png; sourceTree = "<group>"; };
+		1C977DB416FB491F00E8C315 /* myFriendsPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFriendsPic.png; sourceTree = "<group>"; };
+		1C977DB616FB57FB00E8C315 /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		1C977DB716FB57FB00E8C315 /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		1CCF64DE169377E100E1F896 /* APFriendStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APFriendStorage.h; sourceTree = "<group>"; };
 		1CCF64DF169377E100E1F896 /* APFriendStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APFriendStorage.m; sourceTree = "<group>"; };
 		1CCF64E216937B0C00E1F896 /* APCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCoreDataService.h; sourceTree = "<group>"; };
@@ -218,8 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				1C4B443A16907AEA008D1823 /* Model.xcdatamodeld */,
-				1C84231C16C7E82A009CB823 /* Friend.h */,
-				1C84231D16C7E82A009CB823 /* Friend.m */,
+				1C977DB616FB57FB00E8C315 /* Friend.h */,
+				1C977DB716FB57FB00E8C315 /* Friend.m */,
 				1C39A44D16C831FE00A5FBB3 /* Me.h */,
 				1C39A44E16C831FE00A5FBB3 /* Me.m */,
 				1C52F14816BD178400A846DA /* Storages */,
@@ -246,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				1C82374716EBE890000459EB /* camera.png */,
+				1C977DB216FB491300E8C315 /* MyFriendsLoggo.png */,
+				1C977DB416FB491F00E8C315 /* myFriendsPic.png */,
 				1C39A44B16C82EB100A5FBB3 /* aFrame.png */,
 				1C39A44816C82B1500A5FBB3 /* frame.jpg */,
 				1C5AA60E16C7A356006A972E /* fille.jpg */,
@@ -313,6 +319,8 @@
 				1C39A44916C82B1500A5FBB3 /* frame.jpg in Resources */,
 				1C39A44C16C82EB100A5FBB3 /* aFrame.png in Resources */,
 				1C82374816EBE890000459EB /* camera.png in Resources */,
+				1C977DB316FB491300E8C315 /* MyFriendsLoggo.png in Resources */,
+				1C977DB516FB491F00E8C315 /* myFriendsPic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,12 +344,12 @@
 				1C52F14516BD168F00A846DA /* APEditMeViewController.m in Sources */,
 				1C52F14B16BD17A300A846DA /* APMeStorage.m in Sources */,
 				1C5AA61A16C7B291006A972E /* APImageStorage.m in Sources */,
-				1C84231E16C7E82A009CB823 /* Friend.m in Sources */,
 				1C39A44F16C831FE00A5FBB3 /* Me.m in Sources */,
 				1C01FD4716F4A05B003720A7 /* APDetailStepTwoViewController.m in Sources */,
 				1C01FD4B16F4A331003720A7 /* APDetailStepThreeViewController.m in Sources */,
 				1C01FD4F16F4B6EB003720A7 /* APEditStepTwoViewController.m in Sources */,
 				1C01FD5216F4B706003720A7 /* APEditStepThreeViewController.m in Sources */,
+				1C977DB816FB57FB00E8C315 /* Friend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

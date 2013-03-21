@@ -23,60 +23,50 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    if ([segue.identifier isEqualToString:@"EditFriendSeg"]) {
-//        [[segue destinationViewController] setTitle:_currentFriend.firstName];
-//        [[segue destinationViewController] setCurrentFriend:_currentFriend];
-//       [[segue destinationViewController]setEditMode:YES];
-//    }
-    if ([segue.identifier isEqualToString:@"EditFriendSeg"]) {
-        UITabBarController *tbc = [segue destinationViewController];
+
+    if ([segue.identifier isEqualToString:@"EditFriendSegue"]) {
         
-        APEditFriendViewController *efVc = [[tbc viewControllers] objectAtIndex:0];
-        APEditStepTwoViewController *efTwovc = [[tbc viewControllers] objectAtIndex:1];
-        APEditStepThreeViewController *efThreevc = [[tbc viewControllers] objectAtIndex:2];
-       
+        APEditFriendViewController *efVc = [segue destinationViewController];
         [efVc setCurrentFriend:_currentFriend];
-        [efTwovc setCurrentFriend:_currentFriend];
-        [efThreevc setCurrentFriend:_currentFriend];
+        [efVc setTitle:@"Edit base info"];
         [efVc setEditMode:YES];
-        [efTwovc setEditMode:YES];
-        [efThreevc setEditMode:YES];
-        
+
         UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]
                                         initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
-                                        target:[[tbc viewControllers]objectAtIndex:0]
+                                        target:efVc
                                         action:@selector(removeFriend)];
         
-        [[tbc navigationItem]setRightBarButtonItem:rightBarBtn];
+        [[efVc navigationItem]setRightBarButtonItem:rightBarBtn];
+          [[[self tabBarController]navigationItem] setTitle:@"Cancel"];
+
     }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@:s base info",_currentFriend.firstName]];
+    [[[self tabBarController]navigationItem] setTitle:[NSString stringWithFormat:@"%@'s base info",_currentFriend.firstName]];
     _firstName.text = _currentFriend.firstName;
     _lastName.text = _currentFriend.lastName;
     _birthday.text = _currentFriend.birthDay;
     _address.text = _currentFriend.address;
     _school.text = _currentFriend.school;
     _email.text = _currentFriend.email;
-    _phoneNumber.text =@"nummer";
+    _phoneNumber.text = _currentFriend.phoneNumber;
+
         
     NSString *imageKey = [_currentFriend imageKey];
     if (imageKey) {
         UIImage *imageToDisplay = [[APImageStorage defaultImageStore] imageForKey:imageKey];
-        NSLog(@"there is an imagekey"); 
         [_image setImage:imageToDisplay];
     } else {
-        [_image setImage:nil]; NSLog(@"there NO an imagekey"); 
+        [_image setImage:nil]; 
     }
     
 }
 - (void)editFriend
 {
-    NSLog(@"preform segue edit friend??");
-    [self performSegueWithIdentifier: @"EditFriendSeg" sender: self];
+    [self performSegueWithIdentifier: @"EditFriendSegue" sender: self];
     
 }
 

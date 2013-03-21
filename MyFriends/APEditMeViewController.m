@@ -38,27 +38,11 @@
  
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
 
 - (IBAction)saveMe:(id)sender {
     [[APMeStorage sharedStorage] createMeWithName:_firstName.text
                                          lastname:_lastName.text
-                                         birthDay:nil
+                                         birthDay:_birthday.text
                                           address:_address.text
                                             email:_email.text
                                            school:_school.text
@@ -75,5 +59,18 @@
                                       phonenumber:nil];
     [[self navigationController]popViewControllerAnimated:YES];
 
+}
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self.tableView setFrame:CGRectMake(0,0,320,570)];
+    [[self tableView] reloadData];
 }
 @end

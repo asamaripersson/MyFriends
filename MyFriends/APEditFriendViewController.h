@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Friend;
-@interface APEditFriendViewController : UITableViewController <UITextFieldDelegate, UIPopoverControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface APEditFriendViewController : UITableViewController <UITextFieldDelegate, UIPopoverControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarControllerDelegate, UIAlertViewDelegate>
 {
 UIPopoverController *imagePickerPopover;
 }
@@ -26,8 +26,11 @@ UIPopoverController *imagePickerPopover;
 @property (weak, nonatomic) IBOutlet UITextField *address;
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *school;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
 
-- (IBAction)saveFriend:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *nextBtnOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *nextBtnLable;
 
+- (IBAction)nextStep:(id)sender;
 
 @end
